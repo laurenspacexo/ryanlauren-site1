@@ -128,18 +128,24 @@ h3 {
 
 .card img {
   width:100%;
-  height:auto;
-  border-radius:10px;
-  margin-bottom:15px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
 }
   
 .card {
   border:1px solid rgba(255,255,255,0.1);
   padding:20px;
   transition:0.3s;
-  overflow:hidden;
 }
 
+.card h4 {
+  margin-top:10px;
+  font-size:18px;
+  letter-spacing:0.5px;
+}
+  
 .footer {
   text-align:center;
   padding:40px;
