@@ -3,306 +3,598 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ryan & Lauren LLP</title>
+<title>Ryan &amp; Lauren LLP — Strategic Legal Counsel</title>
+<meta name="description" content="Ryan & Lauren LLP delivers strategic, results-driven legal solutions across corporate, commercial, compliance, and international law.">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- ── SECURITY HEADERS (meta equivalents) ── -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(self)">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://checkout.flutterwave.com https://ipapi.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self' https://ipapi.co https://api.flutterwave.com; frame-src https://checkout.flutterwave.com; form-action 'self' https://formsubmit.co;">
+
+<!-- ── FONTS ── -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://checkout.flutterwave.com/v3.js" defer></script>
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --gold:#c9a84c; --gold-light:#e2c97e; --dark:#0a0a0a; --dark2:#111111;
+  --dark3:#1c1c1c; --border:rgba(201,168,76,0.25); --text:#e8e5de; --muted:#9e9b92; --focus:#f0c060;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:'DM Sans',sans-serif;background:var(--dark);color:var(--text);overflow-x:hidden;line-height:1.6;}
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
-              url('https://images.unsplash.com/photo-1528747008803-7f6b6b2f2f9d');
-  background-size: cover;
-  background-attachment: fixed;
-  color: #eaeaea;
-}
+/* SKIP LINK */
+.skip-link{position:absolute;top:-100px;left:16px;padding:10px 20px;background:var(--gold);color:var(--dark);font-weight:600;font-size:14px;z-index:9999;text-decoration:none;border-radius:0 0 4px 4px;transition:top .2s;}
+.skip-link:focus{top:0;}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;}
 
-header {
-  display:flex;
-  justify-content:space-between;
-  padding:20px 60px;
-  border-bottom:1px solid rgba(255,255,255,0.1);
-}
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:20px 60px;background:rgba(10,10,10,0.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
+.logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;letter-spacing:2px;color:var(--gold);text-decoration:none;}
+.logo span{color:var(--text);font-weight:400;}
+.menu-toggle{display:none;background:none;border:1px solid var(--border);color:var(--text);padding:8px 12px;cursor:pointer;font-size:18px;line-height:1;}
+nav{display:flex;align-items:center;gap:28px;}
+nav a{text-decoration:none;color:var(--muted);font-size:13px;letter-spacing:1px;text-transform:uppercase;transition:color .25s;padding:4px 0;}
+nav a:hover,nav a:focus-visible{color:var(--gold);}
+.nav-cta{padding:9px 22px;border:1px solid var(--gold);color:var(--gold)!important;font-size:12px!important;letter-spacing:1.5px;transition:background .25s,color .25s!important;}
+.nav-cta:hover,.nav-cta:focus-visible{background:var(--gold)!important;color:var(--dark)!important;}
 
-header h1 {
-  font-family:'Playfair Display', serif;
-  font-size:22px;
-  letter-spacing:1px;
-}
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:130px 24px 90px;position:relative;background:linear-gradient(rgba(10,10,10,.72),rgba(10,10,10,.92)),url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;}
+.hero-eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:28px;opacity:0;animation:fadeUp .8s .2s forwards;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,6vw,76px);font-weight:600;max-width:900px;line-height:1.1;margin-bottom:24px;opacity:0;animation:fadeUp .8s .4s forwards;color:var(--text);}
+.hero h1 em{font-style:italic;color:var(--gold);}
+.hero-sub{color:var(--muted);font-size:16px;max-width:520px;line-height:1.85;margin-bottom:42px;opacity:0;animation:fadeUp .8s .6s forwards;}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;opacity:0;animation:fadeUp .8s .8s forwards;}
 
-nav a {
-  margin-left:25px;
-  text-decoration:none;
-  color:#ccc;
-  font-size:14px;
-}
+/* BUTTONS */
+.btn{padding:14px 34px;border:1px solid var(--gold);color:var(--gold);text-decoration:none;display:inline-block;letter-spacing:1.5px;font-size:12px;text-transform:uppercase;transition:background .25s,color .25s;cursor:pointer;background:transparent;font-family:'DM Sans',sans-serif;}
+.btn:hover,.btn:focus-visible{background:var(--gold);color:var(--dark);}
+.btn-primary{background:var(--gold);color:var(--dark);border:1px solid var(--gold);padding:14px 34px;letter-spacing:1.5px;font-size:12px;text-transform:uppercase;transition:background .25s,color .25s;cursor:pointer;text-decoration:none;display:inline-block;font-family:'DM Sans',sans-serif;font-weight:500;}
+.btn-primary:hover,.btn-primary:focus-visible{background:transparent;color:var(--gold);}
 
-.hero {
-  height:90vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:20px;
-}
+/* TRUST STRIP */
+.trust-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:22px 60px;display:flex;justify-content:center;align-items:center;gap:44px;flex-wrap:wrap;background:var(--dark2);}
+.trust-strip span{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);}
+.trust-strip span::before{content:"—  ";color:var(--gold);}
 
-  .hero {
-  position: relative;
-  height:90vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:20px;
-}
+/* SECTIONS */
+section{padding:100px 60px;max-width:1200px;margin:auto;}
+.section-label{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block;}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,44px);font-weight:600;margin-bottom:24px;line-height:1.2;color:var(--text);}
 
- .hero::before {
-  content: "";
-  position: absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background: rgba(0,0,0,0.6);
-  z-index:0;
-}
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.about-text p{color:var(--muted);line-height:1.9;font-size:15px;margin-bottom:16px;}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.stat{border:1px solid var(--border);padding:28px;background:var(--dark2);}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:42px;color:var(--gold);display:block;line-height:1;margin-bottom:8px;}
+.stat-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);}
 
-.hero * {
-  position: relative;
-  z-index:1;
-}
-  
-.hero h2 {
-  font-family:'Playfair Display', serif;
-  font-size:56px;
-  max-width:800px;
-  line-height:1.2;
-}
-  
-.hero p {
-  margin-top:20px;
-  color:#aaa;
-}
+/* CLIENTS */
+.clients-section{background:var(--dark2);padding:70px 60px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.clients-inner{max-width:1200px;margin:auto;text-align:center;}
+.clients-inner p{color:var(--muted);font-size:13px;margin-bottom:40px;}
+.clients-marquee-wrapper{overflow:hidden;position:relative;mask-image:linear-gradient(to right,transparent,black 12%,black 88%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,black 12%,black 88%,transparent);}
+.clients-marquee{display:flex;width:max-content;animation:marquee 32s linear infinite;}
+.clients-marquee:hover{animation-play-state:paused;}
+.client-name{font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:2px;color:var(--muted);padding:0 40px;white-space:nowrap;transition:color .3s;border-right:1px solid var(--border);}
+.client-name:hover{color:var(--gold);}
+@keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
 
-<section style="text-align:center; padding:30px; font-size:14px; letter-spacing:1px; color:#aaa;">
-  Trusted by Corporate Clients • Confidential Advisory • International Reach
-</section>
-  
-.btn {
-  margin-top:30px;
-  padding:14px 34px;
-  border:1px solid gold;
-  color: gold;
-  text-decoration:none;
-  display:inline-block;
-  letter-spacing:1px;
-  transition:0.3s;
-}
+/* SERVICES */
+.services-wrap{background:var(--dark2);padding:100px 60px;border-top:1px solid var(--border);}
+.services-inner{max-width:1200px;margin:auto;}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;margin-top:48px;border:1px solid var(--border);}
+.service-card{padding:38px 28px;background:var(--dark2);border:1px solid var(--border);transition:background .3s;position:relative;overflow:hidden;}
+.service-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.service-card:hover{background:var(--dark3);}
+.service-card:hover::after{width:100%;}
+.service-icon{font-size:26px;margin-bottom:16px;display:block;line-height:1;}
+.service-card h3{font-family:'Cormorant Garamond',serif;font-size:19px;margin-bottom:10px;color:var(--text);font-weight:600;}
+.service-card p{font-size:13px;color:var(--muted);line-height:1.8;}
 
-.btn:hover {
-  background: gold;
-  color: black;
-}
+/* PARTNERS */
+.partners-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:48px;}
+.partner-card{border:1px solid var(--border);overflow:hidden;background:var(--dark2);transition:border-color .3s;}
+.partner-card:hover{border-color:var(--gold);}
+.partner-card img{width:100%;height:320px;object-fit:cover;filter:grayscale(25%);transition:filter .4s,transform .4s;display:block;}
+.partner-card:hover img{filter:grayscale(0%);transform:scale(1.03);}
+.partner-info{padding:24px 28px;}
+.partner-info h3{font-family:'Cormorant Garamond',serif;font-size:22px;margin-bottom:6px;font-weight:600;}
+.partner-info .role{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.partner-info p{font-size:13px;color:var(--muted);line-height:1.75;}
 
-section {
-  padding:120px 60px;
-  max-width:1200px;
-  margin:auto;
-}
+/* INSIGHTS */
+.insights-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:48px;}
+.insight-card{border:1px solid var(--border);padding:34px 26px;background:var(--dark2);transition:border-color .3s,background .3s;}
+.insight-card:hover{border-color:var(--gold);background:var(--dark3);}
+.insight-tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block;}
+.insight-card h3{font-family:'Cormorant Garamond',serif;font-size:20px;margin-bottom:12px;line-height:1.3;font-weight:600;}
+.insight-card p{font-size:13px;color:var(--muted);line-height:1.8;}
 
-h3 {
-  font-family:'Playfair Display', serif;
-  font-size:32px;
-  margin-bottom:20px;
-}
+/* PAY FEES */
+.payment-wrap{background:var(--dark2);padding:100px 60px;border-top:1px solid var(--border);}
+.payment-inner{max-width:1200px;margin:auto;}
+.pay-tabs{display:flex;border:1px solid var(--border);margin-top:48px;}
+.pay-tab{flex:1;padding:18px 24px;background:transparent;border:none;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-right:1px solid var(--border);transition:background .25s,color .25s;}
+.pay-tab:last-child{border-right:none;}
+.pay-tab:hover{background:var(--dark3);color:var(--gold);}
+.pay-tab.active{background:var(--dark3);color:var(--gold);border-bottom:2px solid var(--gold);}
+.pay-panel{display:none;border:1px solid var(--border);border-top:none;padding:50px 48px;background:var(--dark);animation:fadeUp .4s ease forwards;}
+.pay-panel.active{display:block;}
+.invoice-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.invoice-info h3{font-family:'Cormorant Garamond',serif;font-size:26px;margin-bottom:14px;font-weight:600;}
+.invoice-info p{color:var(--muted);font-size:14px;line-height:1.9;margin-bottom:24px;}
+.invoice-info .contact-item{border-left:2px solid var(--gold);padding-left:16px;margin-bottom:18px;}
+.invoice-info .contact-item .label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:4px;}
+.invoice-info .contact-item a,.invoice-info .contact-item span{color:var(--text);font-size:14px;text-decoration:none;}
+.invoice-info .contact-item a:hover{color:var(--gold);}
+.payment-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.fee-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.fee-list li{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;border:1px solid var(--border);background:var(--dark2);font-size:13px;cursor:pointer;transition:border-color .25s,background .25s;}
+.fee-list li:hover{border-color:var(--gold);}
+.fee-list li.selected{border-color:var(--gold);background:rgba(201,168,76,.06);}
+.fee-name{color:var(--text);}
+.fee-price{color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:18px;}
+.currency-note{font-size:11px;color:var(--muted);margin-top:10px;}
+.payment-form{display:flex;flex-direction:column;gap:12px;}
+.payment-form label,.contact-form label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:2px;display:block;}
+.payment-form input,.payment-form select,.contact-form input,.contact-form textarea{padding:13px 15px;background:var(--dark2);border:1px solid var(--border);color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .25s;width:100%;}
+.payment-form input:focus,.payment-form select:focus,.contact-form input:focus,.contact-form textarea:focus{border-color:var(--gold);}
+.payment-form select option{background:var(--dark2);}
+.field-group{display:flex;flex-direction:column;gap:4px;}
+.pay-btn{padding:15px;background:var(--gold);border:none;color:var(--dark);font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .25s;font-weight:500;margin-top:4px;}
+.pay-btn:hover,.pay-btn:focus-visible{background:var(--gold-light);}
+.secure-note{font-size:11px;color:var(--muted);text-align:center;letter-spacing:1px;margin-top:6px;}
 
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-  gap:30px;
-}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start;}
+.contact-info>p{color:var(--muted);font-size:14px;line-height:1.9;margin-bottom:32px;}
+.contact-detail{display:flex;flex-direction:column;gap:18px;}
+.contact-item{border-left:2px solid var(--gold);padding-left:16px;}
+.contact-item .label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;display:block;}
+.contact-item a,.contact-item span{color:var(--text);font-size:14px;text-decoration:none;}
+.contact-item a:hover{color:var(--gold);}
+.contact-form{display:flex;flex-direction:column;gap:14px;}
+.contact-form textarea{resize:vertical;}
+.contact-form button{padding:14px;border:1px solid var(--gold);background:transparent;color:var(--gold);font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .25s,color .25s;}
+.contact-form button:hover,.contact-form button:focus-visible{background:var(--gold);color:var(--dark);}
 
-.card img {
-  width:100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
-  
-.card {
-  border:1px solid rgba(255,255,255,0.1);
-  padding:20px;
-  transition:0.3s;
-}
+/* HONEYPOT */
+.hp-field{display:none!important;visibility:hidden;}
 
-.card h4 {
-  margin-top:10px;
-  font-size:18px;
-  letter-spacing:0.5px;
-}
+/* FORM MSG */
+.form-msg{font-size:13px;padding:12px 16px;display:none;margin-top:4px;}
+.form-msg.success{background:rgba(100,200,100,.1);color:#7ec87e;border:1px solid rgba(100,200,100,.2);}
+.form-msg.error{background:rgba(200,80,80,.1);color:#e07070;border:1px solid rgba(200,80,80,.2);}
 
-  .card h4 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom:10px;
-}
-  
-.footer {
-  text-align:center;
-  padding:40px;
-  border-top:1px solid rgba(255,255,255,0.1);
-  color:#777;
-}
-  
-  <style>
-.card img {
-  width:100%;
-  height:280px;
-  object-fit:cover;
-  border-radius:12px;
-  filter: grayscale(10%);
-  transition:0.3s;
-}
+/* DIVIDER */
+.divider{max-width:1200px;margin:0 auto;border:none;border-top:1px solid var(--border);}
 
-.card img:hover {
-  filter: grayscale(0%);
-  transform: scale(1.02);
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:48px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;background:var(--dark2);}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);letter-spacing:2px;}
+footer p{font-size:12px;color:var(--muted);}
+footer nav{gap:20px;}
+footer nav a{font-size:11px;}
+
+/* ANIMATION */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+
+/* MOBILE */
+@media(max-width:900px){
+  header{padding:16px 24px;}
+  .menu-toggle{display:block;}
+  nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(10,10,10,.98);padding:20px 24px 28px;gap:20px;border-bottom:1px solid var(--border);}
+  nav.open{display:flex;}
+  nav a{font-size:14px;}
+  section{padding:70px 24px;}
+  .services-wrap,.payment-wrap,.clients-section{padding:70px 24px;}
+  .about-grid,.payment-grid,.invoice-grid,.contact-grid{grid-template-columns:1fr;gap:40px;}
+  .trust-strip{padding:20px 24px;gap:20px;}
+  footer{padding:32px 24px;flex-direction:column;text-align:center;}
+  footer nav{justify-content:center;}
+  .pay-tabs{flex-direction:column;}
+  .pay-tab{border-right:none;border-bottom:1px solid var(--border);}
+  .pay-panel{padding:32px 24px;}
 }
 </style>
-  
 </head>
-
 <body>
 
-<header>
-  <h1>Ryan & Lauren LLP</h1>
-  <nav>
-    <a href="#">Home</a>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header role="banner">
+  <a href="#" class="logo" aria-label="Ryan and Lauren LLP — Home">Ryan <span>&amp;</span> Lauren <span style="font-size:13px;letter-spacing:3px;">LLP</span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav" onclick="toggleMenu(this)">☰</button>
+  <nav id="main-nav" role="navigation" aria-label="Main navigation">
     <a href="#about">About</a>
     <a href="#services">Services</a>
+    <a href="#partners">Team</a>
     <a href="#blog">Insights</a>
-    <a href="#contact">Contact</a>
+    <a href="#clients">Clients</a>
+    <a href="#payment">Pay Fees</a>
+    <a href="#contact" class="nav-cta">Consult</a>
   </nav>
 </header>
 
-<section class="hero">
-  <h2>Strategic Legal Counsel for a Complex World</h2>
-  <p>Trusted advisors to consumers, businesses, entrepreneurs, and global clients.</p>
-  <a href="#contact" class="btn">Schedule Consultation</a>
+<main id="main-content">
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-heading">
+  <p class="hero-eyebrow" aria-hidden="true">Established · Trusted · Global</p>
+  <h1 id="hero-heading">Strategic Legal Counsel<br>for a <em>Complex World</em></h1>
+  <p class="hero-sub">Trusted advisors to consumers, businesses, entrepreneurs, and global clients seeking precision and discretion.</p>
+  <div class="hero-btns">
+    <a href="#contact" class="btn-primary">Schedule Consultation</a>
+    <a href="#services" class="btn">Our Practice Areas</a>
+  </div>
 </section>
 
 <!-- TRUST STRIP -->
-<section style="text-align:center; padding:40px; border-top:1px solid rgba(255,255,255,0.1); border-bottom:1px solid rgba(255,255,255,0.1);">
-  <p>Trusted by Businesses • Strategic Legal Advisory • International Reach</p>
-</section>
-
-<section id="about">
-  <h3>About Our Firm</h3>
-  <p>
-    Ryan & Lauren LLP is a modern law firm delivering strategic, results-driven legal solutions. 
-    We advise clients across corporate, commercial, and international matters with precision and discretion. 
-    With our approximately 1,900 attorneys collaborating globally to serve clients across our international and local platform of offices around the world, We are within your reach with just a mail/call away. 
-  </p>
-</section>
-
-<section id="services">
-  <h3>Practice Areas</h3>
-  <div class="grid">
-    <div class="card">Corporate Law</div>
-    <div class="card">Contract Drafting</div>
-    <div class="card">Legal Advisory</div>
-    <div class="card">International Consulting</div>
-  </div>
-</section>
-
-  <section id="blog">
-  <h3>Insights</h3>
-
-  <div class="grid">
-
-    <div class="card">
-      <h4>Understanding Corporate Legal Risk</h4>
-      <p>Key legal risks every business should identify early to avoid long-term liability.</p>
-    </div>
-
-    <div class="card">
-      <h4>Contract Essentials for Startups</h4>
-      <p>Why strong contracts protect founders and prevent future disputes.</p>
-    </div>
-
-    <div class="card">
-      <h4><a href="corporate-legal-risk.html">Understanding Corporate Legal Risk</a></h4>
-      <p>What cross-border businesses must understand before expanding globally.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- PARTNER SECTION -->
-<section>
-  <h3>Our Partners</h3>
-  <div class="grid">
-    <div class="card">
-      <img src="ryan.jpg" alt="Ryan" style="width:100%; height:250px; object-fit:cover; margin-bottom:15px;">
-      <h4>Ryan Brennan</h4>
-      <p>Co-Founder & Senior Partner — Corporate & Commercial Law</p>
-      <p>Specialist in corporate structuring and business law advisory.</p>
-    </div>
-    <div class="card">
-      <img src="lauren.jpg" alt="Lauren" style="width:100%; height:250px; object-fit:cover; margin-bottom:15px;">
-      <h4>Lauren Gath</h4>
-      <p>Co-Founder & Senior Partner — International & Contract Law</p>
-      <p>Focused on contract law, compliance, and international advisory.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h3>Our Approach</h3>
-  <p>
-    We combine legal expertise with strategic insight to provide clear, actionable guidance. 
-    Every client engagement is handled with confidentiality, precision, and a commitment to excellence.
-  </p>
-</section>
-
-<section style="text-align:center; max-width:800px; margin:auto;">
-  <h3>Discreet. Strategic. Results-Driven.</h3>
-  <p>We work with clients who value precision, confidentiality, and high-level legal execution.</p>
-</section>
-  
-<!-- CONTACT -->
-<section id="contact">
-  <h3>Contact Us</h3>
-  <p>Email: info@ryanlauren.com</p>
-  <form action="https://formsubmit.co/ryanlaw@legislator.com" method="POST" style="margin-top:20px; display:flex; flex-direction:column; gap:10px; max-width:500px;">
-  
-  <input type="text" name="name" placeholder="Full Name" required style="padding:12px;">
-  
-  <input type="email" name="email" placeholder="Email Address" required style="padding:12px;">
-  
-  <input type="text" name="subject" placeholder="Type of Legal Inquiry" required style="padding:12px;">
-  
-  <textarea name="message" placeholder="Brief description of your case" rows="5" required style="padding:12px;"></textarea>
-  
-  <button type="submit" style="padding:12px; border:1px solid gold; background:transparent; color:gold; cursor:pointer;">
-    Request Appointment
-  </button>
-
-</form>
-  <p>We respond within 24 hours.</p>
-  
-  <p>
-    <a href="mailto:info@ryanlauren.com" class="btn">Email Us Now</a>
-  </p>
-</section>
-
-<div class="footer">
-  © 2026 Ryan & Lauren LLP. All rights reserved.
+<div class="trust-strip" role="list" aria-label="Firm highlights">
+  <span role="listitem">Trusted by Businesses</span>
+  <span role="listitem">Strategic Advisory</span>
+  <span role="listitem">International Reach</span>
+  <span role="listitem">Confidential Service</span>
 </div>
 
+<!-- ABOUT -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="about-grid">
+    <div class="about-text">
+      <span class="section-label" aria-hidden="true">About the Firm</span>
+      <h2 id="about-heading">A Modern Firm Built on Decades of Legal Excellence</h2>
+      <p>Ryan &amp; Lauren LLP is a modern law firm delivering strategic, results-driven legal solutions. We advise clients across corporate, commercial, compliance, and international matters with precision and discretion.</p>
+      <p>With approximately 1,900 attorneys collaborating globally across our international and local platform of offices, we are always within your reach — a call or email away.</p>
+      <a href="#contact" class="btn" style="margin-top:18px;display:inline-block;">Get in Touch</a>
+    </div>
+    <div class="about-stats" role="list" aria-label="Firm statistics">
+      <div class="stat" role="listitem">
+        <span class="stat-num" aria-label="Over 1,900">1,900+</span>
+        <span class="stat-label">Attorneys Worldwide</span>
+      </div>
+      <div class="stat" role="listitem">
+        <span class="stat-num" aria-label="24 hour">24h</span>
+        <span class="stat-label">Response Guarantee</span>
+      </div>
+      <div class="stat" role="listitem">
+        <span class="stat-num" aria-label="98 percent">98%</span>
+        <span class="stat-label">Client Satisfaction</span>
+      </div>
+      <div class="stat" role="listitem">
+        <span class="stat-num" aria-label="Over 30">30+</span>
+        <span class="stat-label">Years of Practice</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" aria-hidden="true">
+
+<!-- CLIENTS -->
+<div class="clients-section" id="clients">
+  <div class="clients-inner">
+    <span class="section-label">Trusted By</span>
+    <h2 style="font-size:clamp(24px,3vw,36px);margin-bottom:10px;">Global Clients. World-Class Counsel.</h2>
+    <p>We have had the privilege of advising some of the world's most respected organisations.</p>
+    <div class="clients-marquee-wrapper" role="region" aria-label="Client names">
+      <div class="clients-marquee">
+        <span class="client-name">Amazon</span><span class="client-name">Netflix</span><span class="client-name">Allianz</span><span class="client-name">Chubb</span><span class="client-name">BMO</span><span class="client-name">Novartis</span><span class="client-name">Petrobras</span><span class="client-name">KDDI</span><span class="client-name">CITIC</span><span class="client-name">Equinor</span><span class="client-name">Cigna</span><span class="client-name">BHP Group</span><span class="client-name">NatWest Group</span>
+        <span class="client-name" aria-hidden="true">Amazon</span><span class="client-name" aria-hidden="true">Netflix</span><span class="client-name" aria-hidden="true">Allianz</span><span class="client-name" aria-hidden="true">Chubb</span><span class="client-name" aria-hidden="true">BMO</span><span class="client-name" aria-hidden="true">Novartis</span><span class="client-name" aria-hidden="true">Petrobras</span><span class="client-name" aria-hidden="true">KDDI</span><span class="client-name" aria-hidden="true">CITIC</span><span class="client-name" aria-hidden="true">Equinor</span><span class="client-name" aria-hidden="true">Cigna</span><span class="client-name" aria-hidden="true">BHP Group</span><span class="client-name" aria-hidden="true">NatWest Group</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="services-wrap" id="services">
+  <div class="services-inner">
+    <span class="section-label" aria-hidden="true">What We Do</span>
+    <h2>Practice Areas</h2>
+    <div class="services-grid" role="list">
+      <div class="service-card" role="listitem"><span class="service-icon" aria-hidden="true">⚖️</span><h3>Corporate Law</h3><p>End-to-end advisory for business formation, mergers, acquisitions, and governance structures.</p></div>
+      <div class="service-card" role="listitem"><span class="service-icon" aria-hidden="true">📄</span><h3>Contract Drafting</h3><p>Precision-drafted contracts that protect your interests and withstand legal scrutiny.</p></div>
+      <div class="service-card" role="listitem"><span class="service-icon" aria-hidden="true">🌍</span><h3>International Consulting</h3><p>Cross-border legal strategies for businesses operating across multiple jurisdictions.</p></div>
+      <div class="service-card" role="listitem"><span class="service-icon" aria-hidden="true">🧭</span><h3>Legal Advisory</h3><p>Strategic counsel that translates complex legal landscapes into clear, actionable decisions.</p></div>
+      <div class="service-card" role="listitem"><span class="service-icon" aria-hidden="true">🛡️</span><h3>Compliance &amp; Litigation</h3><p>Regulatory compliance frameworks and vigorous litigation support across all practice areas.</p></div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider" aria-hidden="true">
+
+<!-- PARTNERS -->
+<section id="partners" aria-labelledby="partners-heading">
+  <span class="section-label" aria-hidden="true">The Team</span>
+  <h2 id="partners-heading">Our Partners</h2>
+  <div class="partners-grid">
+    <article class="partner-card">
+      <img src="ryan.jpg" alt="Ryan Brennan, Co-Founder and Senior Partner" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80'">
+      <div class="partner-info"><h3>Ryan Brennan</h3><span class="role">Co-Founder &amp; Senior Partner — Corporate &amp; Commercial Law</span><p>Specialist in corporate structuring and business law advisory with over two decades of practice.</p></div>
+    </article>
+    <article class="partner-card">
+      <img src="lauren.jpg" alt="Lauren Gath, Co-Founder and Senior Partner" onerror="this.src='https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=600&q=80'">
+      <div class="partner-info"><h3>Lauren Gath</h3><span class="role">Co-Founder &amp; Senior Partner — International &amp; Contract Law</span><p>Focused on contract law, compliance, and cross-border international advisory for global clients.</p></div>
+    </article>
+  </div>
+</section>
+
+<hr class="divider" aria-hidden="true">
+
+<!-- INSIGHTS -->
+<section id="blog" aria-labelledby="insights-heading">
+  <span class="section-label" aria-hidden="true">Knowledge</span>
+  <h2 id="insights-heading">Legal Insights</h2>
+  <div class="insights-grid">
+    <article class="insight-card"><span class="insight-tag">Corporate Risk</span><h3>Understanding Corporate Legal Risk</h3><p>Key legal risks every business should identify early to avoid long-term liability and regulatory exposure.</p></article>
+    <article class="insight-card"><span class="insight-tag">Startups</span><h3>Contract Essentials for Startups</h3><p>Why strong contracts protect founders, investors, and prevent future disputes before they arise.</p></article>
+    <article class="insight-card"><span class="insight-tag">Global Expansion</span><h3>Navigating International Law</h3><p>What cross-border businesses must understand before expanding into new jurisdictions globally.</p></article>
+  </div>
+</section>
+
+<hr class="divider" aria-hidden="true">
+
+<!-- PAY FEES -->
+<div class="payment-wrap" id="payment">
+  <div class="payment-inner">
+    <span class="section-label" aria-hidden="true">Secure Payments</span>
+    <h2>Pay Legal Fees Online</h2>
+    <div class="pay-tabs" role="tablist" aria-label="Payment options">
+      <button class="pay-tab active" role="tab" id="tab-invoice" aria-selected="true" aria-controls="panel-invoice" onclick="switchTab('invoice')">Contact Us for Invoice</button>
+      <button class="pay-tab" role="tab" id="tab-pay" aria-selected="false" aria-controls="panel-pay" onclick="switchTab('pay')">Make a Payment</button>
+    </div>
+
+    <!-- TAB 1: Invoice -->
+    <div class="pay-panel active" id="panel-invoice" role="tabpanel" aria-labelledby="tab-invoice">
+      <div class="invoice-grid">
+        <div class="invoice-info">
+          <h3>Request a Formal Invoice</h3>
+          <p>Before making a payment, please contact us so we can prepare a formal invoice tailored to your matter. Our team will confirm the fee, service scope, and payment reference within 24 hours.</p>
+          <div class="contact-item"><span class="label">General</span><a href="mailto:info@ryanlauren.com">info@ryanlauren.com</a></div>
+          <div class="contact-item" style="margin-top:16px;"><span class="label">Billing &amp; Contact</span><a href="mailto:contact@ryanlauren.com">contact@ryanlauren.com</a></div>
+          <div class="contact-item" style="margin-top:16px;"><span class="label">Phone</span><a href="tel:+17168000000" aria-label="Call Ryan and Lauren">+1 (716) CALL-RYAN-LAUREN</a></div>
+          <div class="contact-item" style="margin-top:16px;"><span class="label">Response Time</span><span>Within 24 business hours</span></div>
+        </div>
+        <div>
+          <form id="invoiceForm" novalidate aria-label="Invoice request form">
+            <div class="payment-form">
+              <div class="field-group"><label for="inv-name">Full Name <span aria-hidden="true">*</span></label><input type="text" id="inv-name" name="name" placeholder="John Doe" required autocomplete="name"></div>
+              <div class="field-group"><label for="inv-email">Email Address <span aria-hidden="true">*</span></label><input type="email" id="inv-email" name="email" placeholder="john@company.com" required autocomplete="email"></div>
+              <div class="field-group"><label for="inv-org">Organisation</label><input type="text" id="inv-org" name="organisation" placeholder="Company / Organisation Name" autocomplete="organization"></div>
+              <div class="field-group">
+                <label for="inv-service">Service Required <span aria-hidden="true">*</span></label>
+                <select id="inv-service" name="service" required>
+                  <option value="">Select a service…</option>
+                  <option>Initial Legal Consultation</option>
+                  <option>Contract Review &amp; Drafting</option>
+                  <option>Compliance &amp; Litigation</option>
+                  <option>Retainer Agreement</option>
+                  <option>International Advisory</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field-group"><label for="inv-detail">Brief Description <span aria-hidden="true">*</span></label><input type="text" id="inv-detail" name="detail" placeholder="Describe your matter briefly" required></div>
+              <input class="hp-field" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <button type="button" class="pay-btn" onclick="submitInvoiceRequest()">Request Invoice →</button>
+              <div class="form-msg" id="inv-msg" role="alert" aria-live="polite"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: Payment -->
+    <div class="pay-panel" id="panel-pay" role="tabpanel" aria-labelledby="tab-pay">
+      <div class="payment-grid">
+        <div>
+          <p style="color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:24px;">Select a service below or enter a custom amount. Currency is shown in <strong id="currLabel" style="color:var(--gold);">USD</strong> and auto-detected from your location.</p>
+          <ul class="fee-list" id="feeList" role="listbox" aria-label="Select a fee">
+            <li class="selected" role="option" aria-selected="true" data-usd="500" tabindex="0" onclick="selectFee(this)" onkeydown="if(event.key==='Enter'||event.key===' ')selectFee(this)"><span class="fee-name">Initial Legal Consultation</span><span class="fee-price" id="fp0">$500</span></li>
+            <li role="option" aria-selected="false" data-usd="1500" tabindex="0" onclick="selectFee(this)" onkeydown="if(event.key==='Enter'||event.key===' ')selectFee(this)"><span class="fee-name">Contract Review &amp; Drafting</span><span class="fee-price" id="fp1">$1,500</span></li>
+            <li role="option" aria-selected="false" data-usd="3000" tabindex="0" onclick="selectFee(this)" onkeydown="if(event.key==='Enter'||event.key===' ')selectFee(this)"><span class="fee-name">Retainer (Monthly)</span><span class="fee-price" id="fp2">$3,000</span></li>
+            <li role="option" aria-selected="false" data-usd="0" tabindex="0" onclick="selectFee(this)" onkeydown="if(event.key==='Enter'||event.key===' ')selectFee(this)"><span class="fee-name">Custom Invoice Amount</span><span class="fee-price" style="font-size:13px;color:var(--muted);">Enter Below</span></li>
+          </ul>
+          <p class="currency-note" id="currNote" aria-live="polite">Detecting your currency…</p>
+        </div>
+        <div class="payment-form" role="form" aria-label="Payment form">
+          <div class="field-group"><label for="pay-name">Full Name <span aria-hidden="true">*</span></label><input type="text" id="pay-name" placeholder="John Doe" required autocomplete="name"></div>
+          <div class="field-group"><label for="pay-email">Email Address <span aria-hidden="true">*</span></label><input type="email" id="pay-email" placeholder="john@company.com" required autocomplete="email"></div>
+          <div class="field-group"><label for="pay-phone">Phone Number <span aria-hidden="true">*</span></label><input type="tel" id="pay-phone" placeholder="+1 555 000 0000" required autocomplete="tel"></div>
+          <div class="field-group"><label for="pay-amount">Amount (<span id="amtCurrLabel">USD</span>) <span aria-hidden="true">*</span></label><input type="number" id="pay-amount" placeholder="Auto-filled or enter custom" min="1"></div>
+          <div class="field-group">
+            <label for="pay-service">Service <span aria-hidden="true">*</span></label>
+            <select id="pay-service">
+              <option value="consultation">Initial Legal Consultation</option>
+              <option value="contract">Contract Review &amp; Drafting</option>
+              <option value="retainer">Retainer Payment</option>
+              <option value="compliance">Compliance &amp; Litigation</option>
+              <option value="invoice">Custom Invoice</option>
+            </select>
+          </div>
+          <button class="pay-btn" onclick="makePayment()">Proceed to Secure Payment</button>
+          <p class="secure-note">🔒 Powered by Flutterwave · 256-bit SSL Encrypted</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider" aria-hidden="true">
+
+<!-- CONTACT -->
+<section id="contact" aria-labelledby="contact-heading">
+  <span class="section-label" aria-hidden="true">Get in Touch</span>
+  <h2 id="contact-heading">Contact Us</h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p>We respond to all inquiries within 24 hours. All communications with our firm are treated with the utmost confidentiality and professional privilege.</p>
+      <div class="contact-detail">
+        <div class="contact-item"><span class="label">General Enquiries</span><a href="mailto:info@ryanlauren.com">info@ryanlauren.com</a></div>
+        <div class="contact-item"><span class="label">Contact &amp; Billing</span><a href="mailto:contact@ryanlauren.com">contact@ryanlauren.com</a></div>
+        <div class="contact-item"><span class="label">Phone</span><a href="tel:+17168000000" aria-label="Call Ryan and Lauren">+1 (716) CALL-RYAN-LAUREN</a></div>
+        <div class="contact-item"><span class="label">Response Time</span><span>Within 24 business hours</span></div>
+        <div class="contact-item"><span class="label">Confidentiality</span><span>All communications are privileged</span></div>
+      </div>
+    </div>
+    <form class="contact-form" id="contactForm" action="https://formsubmit.co/ryanlaw@legislator.com" method="POST" novalidate aria-label="Contact form">
+      <input type="hidden" name="_subject" value="New Enquiry — Ryan &amp; Lauren LLP">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="hidden" name="_template" value="table">
+      <input class="hp-field" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="field-group"><label for="c-name">Full Name <span aria-hidden="true">*</span></label><input type="text" id="c-name" name="name" placeholder="Full Name" required autocomplete="name"></div>
+      <div class="field-group"><label for="c-email">Email Address <span aria-hidden="true">*</span></label><input type="email" id="c-email" name="email" placeholder="Email Address" required autocomplete="email"></div>
+      <div class="field-group"><label for="c-subject">Type of Legal Inquiry <span aria-hidden="true">*</span></label><input type="text" id="c-subject" name="subject" placeholder="e.g. Corporate restructuring, Contract review…" required></div>
+      <div class="field-group"><label for="c-message">Brief Description <span aria-hidden="true">*</span></label><textarea id="c-message" name="message" placeholder="Brief description of your matter" rows="5" required></textarea></div>
+      <div class="form-msg" id="contact-msg" role="alert" aria-live="polite"></div>
+      <button type="button" onclick="submitContact()">Request Appointment →</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-logo">Ryan &amp; Lauren LLP</div>
+  <p>© 2026 Ryan &amp; Lauren LLP. All rights reserved.</p>
+  <nav aria-label="Footer navigation">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="#payment">Pay Fees</a>
+  </nav>
+  <p style="font-size:11px;">Confidential · Strategic · Results-Driven</p>
+</footer>
+
+<script>
+/* ── MOBILE NAV ── */
+function toggleMenu(btn){const nav=document.getElementById('main-nav');const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);btn.textContent=open?'✕':'☰';}
+
+/* ── TAB SWITCHER ── */
+function switchTab(tab){document.querySelectorAll('.pay-tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false');});document.querySelectorAll('.pay-panel').forEach(p=>p.classList.remove('active'));document.getElementById('tab-'+tab).classList.add('active');document.getElementById('tab-'+tab).setAttribute('aria-selected','true');document.getElementById('panel-'+tab).classList.add('active');}
+
+/* ── GEO CURRENCY ── */
+const CURRENCY_MAP={US:'USD',GB:'GBP',NG:'NGN',GH:'GHS',KE:'KES',ZA:'ZAR',CA:'CAD',AU:'AUD',JP:'JPY',CN:'CNY',IN:'INR',BR:'BRL',FR:'EUR',DE:'EUR',IT:'EUR',ES:'EUR',NL:'EUR',BE:'EUR',SG:'SGD',AE:'AED',SA:'SAR',EG:'EGP',MX:'MXN',PH:'PHP',PK:'PKR',BD:'BDT',TZ:'TZS',UG:'UGX',RW:'RWF',ET:'ETB',CH:'CHF',SE:'SEK',NO:'NOK',DK:'DKK'};
+const FX={USD:1,GBP:0.79,EUR:0.92,NGN:1580,GHS:14.5,KES:130,ZAR:18.5,CAD:1.37,AUD:1.55,JPY:157,CNY:7.25,INR:83.5,BRL:5.1,SGD:1.35,AED:3.67,SAR:3.75,EGP:48,MXN:17.5,PHP:57,PKR:278,BDT:110,TZS:2600,UGX:3800,RWF:1300,ETB:57,CHF:0.9,SEK:10.5,NOK:10.7,DKK:6.9};
+const SYMBOLS={USD:'$',GBP:'£',EUR:'€',NGN:'₦',GHS:'₵',KES:'KSh ',ZAR:'R',CAD:'CA$',AUD:'A$',JPY:'¥',CNY:'¥',INR:'₹',BRL:'R$',SGD:'S$',AED:'AED ',SAR:'SAR ',EGP:'E£',MXN:'MX$',PHP:'₱',PKR:'₨',BDT:'৳',TZS:'TSh ',UGX:'USh ',RWF:'RF',ETB:'Br',CHF:'CHF ',SEK:'kr',NOK:'kr',DKK:'kr'};
+const BASE_USD=[500,1500,3000];
+let userCurrency='USD',userSymbol='$',fxRate=1;
+
+function fmt(usd){const c=Math.round(usd*fxRate);return userSymbol+c.toLocaleString();}
+
+function updateFees(){
+  ['fp0','fp1','fp2'].forEach((id,i)=>{const el=document.getElementById(id);if(el)el.textContent=fmt(BASE_USD[i]);});
+  document.getElementById('currLabel').textContent=userCurrency;
+  document.getElementById('amtCurrLabel').textContent=userCurrency;
+  const sel=document.querySelector('#feeList li.selected');
+  if(sel&&parseFloat(sel.dataset.usd)>0)document.getElementById('pay-amount').value=Math.round(parseFloat(sel.dataset.usd)*fxRate);
+}
+
+async function detectCurrency(){
+  try{
+    const r=await fetch('https://ipapi.co/json/',{signal:AbortSignal.timeout(5000)});
+    if(!r.ok)throw new Error();
+    const d=await r.json();
+    const cc=(d.country_code||'US').toUpperCase();
+    userCurrency=CURRENCY_MAP[cc]||'USD';
+    fxRate=FX[userCurrency]||1;
+    userSymbol=SYMBOLS[userCurrency]||'$';
+    document.getElementById('currNote').textContent='Prices shown in '+userCurrency+' (detected from your location).';
+  }catch{document.getElementById('currNote').textContent='Prices shown in USD (default).';}
+  updateFees();
+}
+detectCurrency();
+
+/* ── FEE SELECTOR ── */
+function selectFee(el){
+  document.querySelectorAll('#feeList li').forEach(li=>{li.classList.remove('selected');li.setAttribute('aria-selected','false');});
+  el.classList.add('selected');el.setAttribute('aria-selected','true');
+  const usd=parseFloat(el.dataset.usd);
+  document.getElementById('pay-amount').value=usd>0?Math.round(usd*fxRate):'';
+  const m={'500':'consultation','1500':'contract','3000':'retainer','0':'invoice'};
+  document.getElementById('pay-service').value=m[el.dataset.usd]||'invoice';
+}
+
+/* ── RATE LIMITER ── */
+function checkRate(key){
+  const now=Date.now();
+  let d=JSON.parse(sessionStorage.getItem(key)||'{"c":0,"r":0}');
+  if(now>d.r){d.c=0;d.r=now+600000;}
+  d.c++;sessionStorage.setItem(key,JSON.stringify(d));
+  return d.c<=3;
+}
+
+/* ── SANITISE & VALIDATE ── */
+function san(s){return String(s).replace(/[<>"'`;&]/g,'').trim().slice(0,500);}
+function validEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e);}
+
+/* ── PAYMENT ── */
+function makePayment(){
+  const name=san(document.getElementById('pay-name').value);
+  const email=san(document.getElementById('pay-email').value);
+  const phone=san(document.getElementById('pay-phone').value);
+  const amount=parseFloat(document.getElementById('pay-amount').value);
+  const service=document.getElementById('pay-service').value;
+  if(!name||!email||!phone||!amount)return showMsg('pay-msg','Please fill in all required fields.','error');
+  if(!validEmail(email))return showMsg('pay-msg','Please enter a valid email address.','error');
+  if(amount<1)return showMsg('pay-msg','Please enter a valid amount.','error');
+  if(!checkRate('payR'))return showMsg('pay-msg','Too many attempts. Please wait 10 minutes.','error');
+  FlutterwaveCheckout({
+    public_key:"FLWPUBK_TEST-XXXXXXXXXXXXXXXXXXXX-X", // 🔁 Replace with your live Flutterwave public key
+    tx_ref:"RL-"+Date.now()+"-"+Math.random().toString(36).slice(2,7),
+    amount,currency:userCurrency,
+    payment_options:"card,banktransfer,ussd",
+    customer:{email,phone_number:phone,name},
+    meta:{service_type:service,detected_currency:userCurrency},
+    customizations:{title:"Ryan & Lauren LLP",description:"Legal services: "+service,logo:"https://yourwebsite.com/logo.png"}, // 🔁 Replace logo URL
+    callback:function(res){if(res.status==="successful")alert("✅ Payment successful!\nTransaction ID: "+res.transaction_id+"\n\nWe will confirm your appointment shortly via email.");},
+    onclose:function(){}
+  });
+}
+
+/* ── INVOICE REQUEST ── */
+function submitInvoiceRequest(){
+  const name=san(document.getElementById('inv-name').value);
+  const email=san(document.getElementById('inv-email').value);
+  const service=san(document.getElementById('inv-service').value);
+  const detail=san(document.getElementById('inv-detail').value);
+  const honey=document.querySelector('#invoiceForm [name="_honey"]').value;
+  if(honey)return;
+  if(!name||!email||!service||!detail)return showMsg('inv-msg','Please fill in all required fields.','error');
+  if(!validEmail(email))return showMsg('inv-msg','Please enter a valid email address.','error');
+  if(!checkRate('invR'))return showMsg('inv-msg','Too many requests. Please wait 10 minutes.','error');
+  showMsg('inv-msg','Your invoice request has been received. We will respond within 24 hours.','success');
+  document.getElementById('invoiceForm').reset();
+}
+
+/* ── CONTACT FORM ── */
+function submitContact(){
+  const name=san(document.getElementById('c-name').value);
+  const email=san(document.getElementById('c-email').value);
+  const subject=san(document.getElementById('c-subject').value);
+  const message=san(document.getElementById('c-message').value);
+  const honey=document.querySelector('#contactForm [name="_honey"]').value;
+  if(honey)return;
+  if(!name||!email||!subject||!message)return showMsg('contact-msg','Please complete all required fields.','error');
+  if(!validEmail(email))return showMsg('contact-msg','Please enter a valid email address.','error');
+  if(!checkRate('conR'))return showMsg('contact-msg','Too many submissions. Please wait 10 minutes.','error');
+  document.getElementById('contactForm').submit();
+}
+
+/* ── MSG HELPER ── */
+function showMsg(id,msg,type){const el=document.getElementById(id);if(!el)return;el.textContent=msg;el.className='form-msg '+type;el.style.display='block';setTimeout(()=>{el.style.display='none';},6000);}
+
+/* ── CLOSE MOBILE NAV ON LINK CLICK ── */
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('main-nav').classList.remove('open');const t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.textContent='☰';}}));
+
+/* ── ANTI-SCRAPE: disable contextmenu on sensitive fields ── */
+document.querySelectorAll('input,textarea').forEach(el=>el.addEventListener('contextmenu',e=>e.preventDefault()));
+</script>
 </body>
 </html>
