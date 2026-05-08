@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessibility Statement — Ryan &amp; Lauren LLP</title>
+<meta name="description" content="Ryan & Lauren LLP's commitment to digital accessibility under ADA Title III and WCAG 2.1 AA.">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#c9a84c;--dark:#0a0a0a;--dark2:#111111;--border:rgba(201,168,76,0.25);--text:#e8e5de;--muted:#9e9b92;--focus:#f0c060;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:'DM Sans',sans-serif;background:var(--dark);color:var(--text);line-height:1.8;padding:0;}
+
+.skip-link{position:absolute;top:-100px;left:16px;padding:10px 20px;background:var(--gold);color:var(--dark);font-weight:600;font-size:14px;z-index:9999;text-decoration:none;border-radius:0 0 4px 4px;transition:top .2s;}
+.skip-link:focus{top:0;}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;}
+
+header{padding:22px 60px;border-bottom:1px solid var(--border);background:var(--dark2);display:flex;justify-content:space-between;align-items:center;}
+.logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;letter-spacing:2px;color:var(--gold);text-decoration:none;}
+.logo span{color:var(--text);font-weight:400;}
+.back-link{font-size:13px;color:var(--muted);text-decoration:none;letter-spacing:1px;text-transform:uppercase;transition:color .25s;}
+.back-link:hover,.back-link:focus-visible{color:var(--gold);}
+
+main{max-width:820px;margin:0 auto;padding:80px 40px 120px;}
+
+.page-label{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block;}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,52px);font-weight:600;line-height:1.15;margin-bottom:12px;color:var(--text);}
+.effective-date{font-size:13px;color:var(--muted);margin-bottom:48px;letter-spacing:0.5px;}
+
+h2{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--text);margin:48px 0 14px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+p{color:var(--muted);font-size:15px;margin-bottom:16px;line-height:1.9;}
+ul{list-style:none;margin:0 0 20px;padding:0;display:flex;flex-direction:column;gap:10px;}
+ul li{color:var(--muted);font-size:15px;padding-left:20px;position:relative;line-height:1.8;}
+ul li::before{content:"—";position:absolute;left:0;color:var(--gold);}
+a{color:var(--gold);text-decoration:underline;text-underline-offset:3px;}
+a:hover{color:var(--gold-light);}
+
+.status-badge{display:inline-block;padding:6px 16px;border:1px solid var(--gold);color:var(--gold);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:32px;}
+
+.contact-block{margin-top:16px;background:var(--dark2);border:1px solid var(--border);border-left:3px solid var(--gold);padding:28px 32px;}
+.contact-block p{margin-bottom:8px;}
+.contact-block p:last-child{margin-bottom:0;}
+
+footer{border-top:1px solid var(--border);padding:32px 60px;text-align:center;background:var(--dark2);}
+footer p{font-size:12px;color:var(--muted);}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:0.01ms!important;}}
+@media(max-width:768px){header{padding:18px 24px;}main{padding:60px 24px 80px;}footer{padding:24px;}}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header role="banner">
+  <a href="index.html" class="logo">Ryan <span>&amp;</span> Lauren <span style="font-size:13px;letter-spacing:3px;">LLP</span></a>
+  <a href="index.html" class="back-link" aria-label="Back to main website">← Back to Site</a>
+</header>
+
+<main id="main-content" role="main">
+
+  <span class="page-label">Legal &amp; Compliance</span>
+  <h1>Accessibility Statement</h1>
+  <p class="effective-date">Effective Date: May 1, 2026 &nbsp;·&nbsp; Last Reviewed: May 8, 2026</p>
+
+  <span class="status-badge" role="note">Conformance Target: WCAG 2.1 Level AA</span>
+
+  <h2>Our Commitment</h2>
+  <p>Ryan &amp; Lauren LLP is committed to ensuring that our website is accessible to all individuals, including those with disabilities. We believe that equal access to legal information and services is a fundamental right, and we strive to meet or exceed the requirements of:</p>
+  <ul>
+    <li>The Americans with Disabilities Act (ADA), Title III</li>
+    <li>The Web Content Accessibility Guidelines (WCAG) 2.1, Level AA</li>
+    <li>Section 508 of the Rehabilitation Act of 1973</li>
+  </ul>
+
+  <h2>Measures We Have Taken</h2>
+  <p>To support accessibility, Ryan &amp; Lauren LLP has implemented the following features across our website:</p>
+  <ul>
+    <li>Skip navigation link to allow keyboard users to bypass repeated header content</li>
+    <li>Semantic HTML5 landmarks including <code>&lt;main&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;footer&gt;</code>, and <code>&lt;section&gt;</code></li>
+    <li>ARIA roles, labels, and live regions on all interactive and dynamic content</li>
+    <li>Descriptive <code>alt</code> text on all images</li>
+    <li>Visible keyboard focus indicators on all interactive elements</li>
+    <li>Logical heading hierarchy (H1 → H2 → H3) for screen reader navigation</li>
+    <li>All form fields have associated <code>&lt;label&gt;</code> elements</li>
+    <li>Colour contrast ratios meeting or exceeding 4.5:1 (WCAG AA) for all body text</li>
+    <li>Animated content (client name marquee) includes a visible Pause/Play control</li>
+    <li>Full <code>prefers-reduced-motion</code> support — all animations are disabled for users who have this OS-level setting enabled</li>
+    <li>Fully responsive layout for mobile and tablet viewports</li>
+    <li>No content relies solely on colour to convey meaning</li>
+    <li>All interactive elements are reachable and operable via keyboard alone</li>
+  </ul>
+
+  <h2>Known Limitations</h2>
+  <p>While we strive for full WCAG 2.1 AA conformance, we acknowledge the following areas are actively being improved:</p>
+  <ul>
+    <li>Some third-party content or embedded elements may not yet be fully accessible</li>
+    <li>Certain older browser or assistive technology combinations may experience minor inconsistencies</li>
+  </ul>
+  <p>We are continuously auditing and improving our site's accessibility and aim to resolve any identified issues in a timely manner.</p>
+
+  <h2>Technical Specifications</h2>
+  <p>Our website was built using the following technologies, each of which contributes to accessibility:</p>
+  <ul>
+    <li>HTML5 with semantic structure</li>
+    <li>CSS3 with <code>prefers-reduced-motion</code> and responsive design</li>
+    <li>Vanilla JavaScript with ARIA state management</li>
+  </ul>
+  <p>The site has been tested with the following assistive technologies:</p>
+  <ul>
+    <li>NVDA (NonVisual Desktop Access) with Firefox</li>
+    <li>VoiceOver with Safari (macOS and iOS)</li>
+    <li>TalkBack with Chrome (Android)</li>
+    <li>Keyboard-only navigation (all major browsers)</li>
+  </ul>
+
+  <h2>Feedback &amp; Contact</h2>
+  <p>We welcome feedback on the accessibility of our website. If you experience any barriers to access, or if you need any content in an alternative format, please contact us and we will respond within 5 business days.</p>
+
+  <div class="contact-block" role="complementary" aria-label="Accessibility contact information">
+    <p><strong style="color:var(--text);">Email:</strong> <a href="mailto:contact@ryanlauren.com">contact@ryanlauren.com</a></p>
+    <p><strong style="color:var(--text);">Subject Line:</strong> Accessibility Feedback</p>
+    <p><strong style="color:var(--text);">Phone:</strong> <a href="tel:+17168000000" aria-label="Call Ryan and Lauren">+1 (716) CALL-RYAN-LAUREN</a></p>
+    <p><strong style="color:var(--text);">Response Time:</strong> Within 5 business days</p>
+  </div>
+
+  <h2>Formal Complaints</h2>
+  <p>If you are not satisfied with our response to your accessibility concern, you may contact the following bodies:</p>
+  <ul>
+    <li><a href="https://www.ada.gov" target="_blank" rel="noopener noreferrer">ADA.gov — U.S. Department of Justice</a></li>
+    <li><a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer">W3C Web Accessibility Initiative (WAI)</a></li>
+  </ul>
+
+  <h2>Updates to This Statement</h2>
+  <p>This accessibility statement is reviewed and updated annually, or whenever significant changes are made to our website. We are committed to maintaining and improving our accessibility practices on an ongoing basis.</p>
+
+</main>
+
+<footer role="contentinfo">
+  <p>© 2026 Ryan &amp; Lauren LLP. All rights reserved. &nbsp;·&nbsp; <a href="index.html">Return to Main Site</a></p>
+</footer>
+
+</body>
+</html>
