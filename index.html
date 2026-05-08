@@ -11,13 +11,13 @@
 <meta http-equiv="X-Frame-Options" content="DENY">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(self)">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://checkout.flutterwave.com https://ipapi.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self' https://ipapi.co https://api.flutterwave.com; frame-src https://checkout.flutterwave.com; form-action 'self' https://formsubmit.co;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self'; form-action 'self' https://formsubmit.co;">
 
 <!-- ── FONTS ── -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<script src="https://checkout.flutterwave.com/v3.js" defer></script>
+
 
 <style>
 :root {
@@ -80,12 +80,23 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,44px);font-
 .clients-section{background:var(--dark2);padding:70px 60px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .clients-inner{max-width:1200px;margin:auto;text-align:center;}
 .clients-inner p{color:var(--muted);font-size:13px;margin-bottom:40px;}
+.marquee-controls{display:flex;justify-content:flex-end;margin-bottom:14px;}
+.marquee-pause-btn{background:transparent;border:1px solid var(--border);color:var(--muted);font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:7px 16px;cursor:pointer;transition:border-color .25s,color .25s;}
+.marquee-pause-btn:hover,.marquee-pause-btn:focus-visible{border-color:var(--gold);color:var(--gold);}
 .clients-marquee-wrapper{overflow:hidden;position:relative;mask-image:linear-gradient(to right,transparent,black 12%,black 88%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,black 12%,black 88%,transparent);}
 .clients-marquee{display:flex;width:max-content;animation:marquee 32s linear infinite;}
+.clients-marquee.paused{animation-play-state:paused;}
 .clients-marquee:hover{animation-play-state:paused;}
 .client-name{font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:2px;color:var(--muted);padding:0 40px;white-space:nowrap;transition:color .3s;border-right:1px solid var(--border);}
 .client-name:hover{color:var(--gold);}
 @keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* REDUCED MOTION (WCAG 2.3.3) */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;}
+  .clients-marquee{animation:none;overflow-x:auto;flex-wrap:wrap;width:100%;justify-content:center;gap:8px;padding:10px 0;}
+  .hero-eyebrow,.hero h1,.hero-sub,.hero-btns{opacity:1;transform:none;animation:none;}
+}
 
 /* SERVICES */
 .services-wrap{background:var(--dark2);padding:100px 60px;border-top:1px solid var(--border);}
@@ -118,40 +129,10 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,44px);font-
 .insight-card h3{font-family:'Cormorant Garamond',serif;font-size:20px;margin-bottom:12px;line-height:1.3;font-weight:600;}
 .insight-card p{font-size:13px;color:var(--muted);line-height:1.8;}
 
-/* PAY FEES */
-.payment-wrap{background:var(--dark2);padding:100px 60px;border-top:1px solid var(--border);}
-.payment-inner{max-width:1200px;margin:auto;}
-.pay-tabs{display:flex;border:1px solid var(--border);margin-top:48px;}
-.pay-tab{flex:1;padding:18px 24px;background:transparent;border:none;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-right:1px solid var(--border);transition:background .25s,color .25s;}
-.pay-tab:last-child{border-right:none;}
-.pay-tab:hover{background:var(--dark3);color:var(--gold);}
-.pay-tab.active{background:var(--dark3);color:var(--gold);border-bottom:2px solid var(--gold);}
-.pay-panel{display:none;border:1px solid var(--border);border-top:none;padding:50px 48px;background:var(--dark);animation:fadeUp .4s ease forwards;}
-.pay-panel.active{display:block;}
-.invoice-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
-.invoice-info h3{font-family:'Cormorant Garamond',serif;font-size:26px;margin-bottom:14px;font-weight:600;}
-.invoice-info p{color:var(--muted);font-size:14px;line-height:1.9;margin-bottom:24px;}
-.invoice-info .contact-item{border-left:2px solid var(--gold);padding-left:16px;margin-bottom:18px;}
-.invoice-info .contact-item .label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:4px;}
-.invoice-info .contact-item a,.invoice-info .contact-item span{color:var(--text);font-size:14px;text-decoration:none;}
-.invoice-info .contact-item a:hover{color:var(--gold);}
-.payment-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
-.fee-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.fee-list li{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;border:1px solid var(--border);background:var(--dark2);font-size:13px;cursor:pointer;transition:border-color .25s,background .25s;}
-.fee-list li:hover{border-color:var(--gold);}
-.fee-list li.selected{border-color:var(--gold);background:rgba(201,168,76,.06);}
-.fee-name{color:var(--text);}
-.fee-price{color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:18px;}
-.currency-note{font-size:11px;color:var(--muted);margin-top:10px;}
-.payment-form{display:flex;flex-direction:column;gap:12px;}
-.payment-form label,.contact-form label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:2px;display:block;}
-.payment-form input,.payment-form select,.contact-form input,.contact-form textarea{padding:13px 15px;background:var(--dark2);border:1px solid var(--border);color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .25s;width:100%;}
-.payment-form input:focus,.payment-form select:focus,.contact-form input:focus,.contact-form textarea:focus{border-color:var(--gold);}
-.payment-form select option{background:var(--dark2);}
 .field-group{display:flex;flex-direction:column;gap:4px;}
-.pay-btn{padding:15px;background:var(--gold);border:none;color:var(--dark);font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .25s;font-weight:500;margin-top:4px;}
-.pay-btn:hover,.pay-btn:focus-visible{background:var(--gold-light);}
-.secure-note{font-size:11px;color:var(--muted);text-align:center;letter-spacing:1px;margin-top:6px;}
+.contact-form label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:2px;display:block;}
+.contact-form input,.contact-form textarea{padding:13px 15px;background:var(--dark2);border:1px solid var(--border);color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .25s;width:100%;}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--gold);}
 
 /* CONTACT */
 .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start;}
@@ -195,14 +176,11 @@ footer nav a{font-size:11px;}
   nav.open{display:flex;}
   nav a{font-size:14px;}
   section{padding:70px 24px;}
-  .services-wrap,.payment-wrap,.clients-section{padding:70px 24px;}
-  .about-grid,.payment-grid,.invoice-grid,.contact-grid{grid-template-columns:1fr;gap:40px;}
+  .services-wrap,.clients-section{padding:70px 24px;}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:40px;}
   .trust-strip{padding:20px 24px;gap:20px;}
   footer{padding:32px 24px;flex-direction:column;text-align:center;}
   footer nav{justify-content:center;}
-  .pay-tabs{flex-direction:column;}
-  .pay-tab{border-right:none;border-bottom:1px solid var(--border);}
-  .pay-panel{padding:32px 24px;}
 }
 </style>
 </head>
@@ -219,7 +197,6 @@ footer nav a{font-size:11px;}
     <a href="#partners">Team</a>
     <a href="#blog">Insights</a>
     <a href="#clients">Clients</a>
-    <a href="#payment">Pay Fees</a>
     <a href="#contact" class="nav-cta">Consult</a>
   </nav>
 </header>
@@ -284,8 +261,11 @@ footer nav a{font-size:11px;}
     <span class="section-label">Trusted By</span>
     <h2 style="font-size:clamp(24px,3vw,36px);margin-bottom:10px;">Global Clients. World-Class Counsel.</h2>
     <p>We have had the privilege of advising some of the world's most respected organisations.</p>
-    <div class="clients-marquee-wrapper" role="region" aria-label="Client names">
-      <div class="clients-marquee">
+    <div class="marquee-controls">
+      <button class="marquee-pause-btn" id="marqueeToggle" aria-label="Pause scrolling client names" onclick="toggleMarquee()">⏸ Pause</button>
+    </div>
+    <div class="clients-marquee-wrapper" role="region" aria-label="Scrolling list of client names">
+      <div class="clients-marquee" id="clientMarquee">
         <span class="client-name">Amazon</span><span class="client-name">Netflix</span><span class="client-name">Allianz</span><span class="client-name">Chubb</span><span class="client-name">BMO</span><span class="client-name">Novartis</span><span class="client-name">Petrobras</span><span class="client-name">KDDI</span><span class="client-name">CITIC</span><span class="client-name">Equinor</span><span class="client-name">Cigna</span><span class="client-name">BHP Group</span><span class="client-name">NatWest Group</span>
         <span class="client-name" aria-hidden="true">Amazon</span><span class="client-name" aria-hidden="true">Netflix</span><span class="client-name" aria-hidden="true">Allianz</span><span class="client-name" aria-hidden="true">Chubb</span><span class="client-name" aria-hidden="true">BMO</span><span class="client-name" aria-hidden="true">Novartis</span><span class="client-name" aria-hidden="true">Petrobras</span><span class="client-name" aria-hidden="true">KDDI</span><span class="client-name" aria-hidden="true">CITIC</span><span class="client-name" aria-hidden="true">Equinor</span><span class="client-name" aria-hidden="true">Cigna</span><span class="client-name" aria-hidden="true">BHP Group</span><span class="client-name" aria-hidden="true">NatWest Group</span>
       </div>
@@ -341,93 +321,6 @@ footer nav a{font-size:11px;}
 
 <hr class="divider" aria-hidden="true">
 
-<!-- PAY FEES -->
-<div class="payment-wrap" id="payment">
-  <div class="payment-inner">
-    <span class="section-label" aria-hidden="true">Secure Payments</span>
-    <h2>Pay Legal Fees Online</h2>
-    <div class="pay-tabs" role="tablist" aria-label="Payment options">
-      <button class="pay-tab active" role="tab" id="tab-invoice" aria-selected="true" aria-controls="panel-invoice" onclick="switchTab('invoice')">Contact Us for Invoice</button>
-      <button class="pay-tab" role="tab" id="tab-pay" aria-selected="false" aria-controls="panel-pay" onclick="switchTab('pay')">Make a Payment</button>
-    </div>
-
-    <!-- TAB 1: Invoice -->
-    <div class="pay-panel active" id="panel-invoice" role="tabpanel" aria-labelledby="tab-invoice">
-      <div class="invoice-grid">
-        <div class="invoice-info">
-          <h3>Request a Formal Invoice</h3>
-          <p>Before making a payment, please contact us so we can prepare a formal invoice tailored to your matter. Our team will confirm the fee, service scope, and payment reference within 24 hours.</p>
-          <div class="contact-item"><span class="label">General</span><a href="mailto:info@ryanlauren.com">info@ryanlauren.com</a></div>
-          <div class="contact-item" style="margin-top:16px;"><span class="label">Billing &amp; Contact</span><a href="mailto:contact@ryanlauren.com">contact@ryanlauren.com</a></div>
-          <div class="contact-item" style="margin-top:16px;"><span class="label">Phone</span><a href="tel:+17168000000" aria-label="Call Ryan and Lauren">+1 (716) CALL-RYAN-LAUREN</a></div>
-          <div class="contact-item" style="margin-top:16px;"><span class="label">Response Time</span><span>Within 24 business hours</span></div>
-        </div>
-        <div>
-          <form id="invoiceForm" novalidate aria-label="Invoice request form">
-            <div class="payment-form">
-              <div class="field-group"><label for="inv-name">Full Name <span aria-hidden="true">*</span></label><input type="text" id="inv-name" name="name" placeholder="John Doe" required autocomplete="name"></div>
-              <div class="field-group"><label for="inv-email">Email Address <span aria-hidden="true">*</span></label><input type="email" id="inv-email" name="email" placeholder="john@company.com" required autocomplete="email"></div>
-              <div class="field-group"><label for="inv-org">Organisation</label><input type="text" id="inv-org" name="organisation" placeholder="Company / Organisation Name" autocomplete="organization"></div>
-              <div class="field-group">
-                <label for="inv-service">Service Required <span aria-hidden="true">*</span></label>
-                <select id="inv-service" name="service" required>
-                  <option value="">Select a service…</option>
-                  <option>Initial Legal Consultation</option>
-                  <option>Contract Review &amp; Drafting</option>
-                  <option>Compliance &amp; Litigation</option>
-                  <option>Retainer Agreement</option>
-                  <option>International Advisory</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div class="field-group"><label for="inv-detail">Brief Description <span aria-hidden="true">*</span></label><input type="text" id="inv-detail" name="detail" placeholder="Describe your matter briefly" required></div>
-              <input class="hp-field" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-              <button type="button" class="pay-btn" onclick="submitInvoiceRequest()">Request Invoice →</button>
-              <div class="form-msg" id="inv-msg" role="alert" aria-live="polite"></div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB 2: Payment -->
-    <div class="pay-panel" id="panel-pay" role="tabpanel" aria-labelledby="tab-pay">
-      <div class="payment-grid">
-        <div>
-          <p style="color:var(--muted);font-size:14px;line-height:1.8;margin-bottom:24px;">Select a service below or enter a custom amount. Currency is shown in <strong id="currLabel" style="color:var(--gold);">USD</strong> and auto-detected from your location.</p>
-          <ul class="fee-list" id="feeList" role="listbox" aria-label="Select a fee">
-            <li class="selected" role="option" aria-selected="true" data-usd="500" tabindex="0" onclick="selectFee(this)" onkeydown="if(event.key==='Enter'||event.key===' ')selectFee(this)"><span class="fee-name">Initial Legal Consultation</span><span class="fee-price" id="fp0">$500</span></li>
-            <li role="option" aria-selected="false" data-usd="1500" tabindex="0" onclick="selectFee(this)" onkeydown="if(event.key==='Enter'||event.key===' ')selectFee(this)"><span class="fee-name">Contract Review &amp; Drafting</span><span class="fee-price" id="fp1">$1,500</span></li>
-            <li role="option" aria-selected="false" data-usd="3000" tabindex="0" onclick="selectFee(this)" onkeydown="if(event.key==='Enter'||event.key===' ')selectFee(this)"><span class="fee-name">Retainer (Monthly)</span><span class="fee-price" id="fp2">$3,000</span></li>
-            <li role="option" aria-selected="false" data-usd="0" tabindex="0" onclick="selectFee(this)" onkeydown="if(event.key==='Enter'||event.key===' ')selectFee(this)"><span class="fee-name">Custom Invoice Amount</span><span class="fee-price" style="font-size:13px;color:var(--muted);">Enter Below</span></li>
-          </ul>
-          <p class="currency-note" id="currNote" aria-live="polite">Detecting your currency…</p>
-        </div>
-        <div class="payment-form" role="form" aria-label="Payment form">
-          <div class="field-group"><label for="pay-name">Full Name <span aria-hidden="true">*</span></label><input type="text" id="pay-name" placeholder="John Doe" required autocomplete="name"></div>
-          <div class="field-group"><label for="pay-email">Email Address <span aria-hidden="true">*</span></label><input type="email" id="pay-email" placeholder="john@company.com" required autocomplete="email"></div>
-          <div class="field-group"><label for="pay-phone">Phone Number <span aria-hidden="true">*</span></label><input type="tel" id="pay-phone" placeholder="+1 555 000 0000" required autocomplete="tel"></div>
-          <div class="field-group"><label for="pay-amount">Amount (<span id="amtCurrLabel">USD</span>) <span aria-hidden="true">*</span></label><input type="number" id="pay-amount" placeholder="Auto-filled or enter custom" min="1"></div>
-          <div class="field-group">
-            <label for="pay-service">Service <span aria-hidden="true">*</span></label>
-            <select id="pay-service">
-              <option value="consultation">Initial Legal Consultation</option>
-              <option value="contract">Contract Review &amp; Drafting</option>
-              <option value="retainer">Retainer Payment</option>
-              <option value="compliance">Compliance &amp; Litigation</option>
-              <option value="invoice">Custom Invoice</option>
-            </select>
-          </div>
-          <button class="pay-btn" onclick="makePayment()">Proceed to Secure Payment</button>
-          <p class="secure-note">🔒 Powered by Flutterwave · 256-bit SSL Encrypted</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<hr class="divider" aria-hidden="true">
-
 <!-- CONTACT -->
 <section id="contact" aria-labelledby="contact-heading">
   <span class="section-label" aria-hidden="true">Get in Touch</span>
@@ -467,59 +360,24 @@ footer nav a{font-size:11px;}
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
-    <a href="#payment">Pay Fees</a>
+    <a href="accessibility.html">Accessibility</a>
   </nav>
   <p style="font-size:11px;">Confidential · Strategic · Results-Driven</p>
 </footer>
 
 <script>
+/* ── MARQUEE PAUSE (WCAG 2.2.2) ── */
+function toggleMarquee(){
+  const m=document.getElementById('clientMarquee');
+  const btn=document.getElementById('marqueeToggle');
+  const paused=m.classList.toggle('paused');
+  btn.textContent=paused?'▶ Play':'⏸ Pause';
+  btn.setAttribute('aria-label',paused?'Play scrolling client names':'Pause scrolling client names');
+}
+
 /* ── MOBILE NAV ── */
 function toggleMenu(btn){const nav=document.getElementById('main-nav');const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);btn.textContent=open?'✕':'☰';}
 
-/* ── TAB SWITCHER ── */
-function switchTab(tab){document.querySelectorAll('.pay-tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false');});document.querySelectorAll('.pay-panel').forEach(p=>p.classList.remove('active'));document.getElementById('tab-'+tab).classList.add('active');document.getElementById('tab-'+tab).setAttribute('aria-selected','true');document.getElementById('panel-'+tab).classList.add('active');}
-
-/* ── GEO CURRENCY ── */
-const CURRENCY_MAP={US:'USD',GB:'GBP',NG:'NGN',GH:'GHS',KE:'KES',ZA:'ZAR',CA:'CAD',AU:'AUD',JP:'JPY',CN:'CNY',IN:'INR',BR:'BRL',FR:'EUR',DE:'EUR',IT:'EUR',ES:'EUR',NL:'EUR',BE:'EUR',SG:'SGD',AE:'AED',SA:'SAR',EG:'EGP',MX:'MXN',PH:'PHP',PK:'PKR',BD:'BDT',TZ:'TZS',UG:'UGX',RW:'RWF',ET:'ETB',CH:'CHF',SE:'SEK',NO:'NOK',DK:'DKK'};
-const FX={USD:1,GBP:0.79,EUR:0.92,NGN:1580,GHS:14.5,KES:130,ZAR:18.5,CAD:1.37,AUD:1.55,JPY:157,CNY:7.25,INR:83.5,BRL:5.1,SGD:1.35,AED:3.67,SAR:3.75,EGP:48,MXN:17.5,PHP:57,PKR:278,BDT:110,TZS:2600,UGX:3800,RWF:1300,ETB:57,CHF:0.9,SEK:10.5,NOK:10.7,DKK:6.9};
-const SYMBOLS={USD:'$',GBP:'£',EUR:'€',NGN:'₦',GHS:'₵',KES:'KSh ',ZAR:'R',CAD:'CA$',AUD:'A$',JPY:'¥',CNY:'¥',INR:'₹',BRL:'R$',SGD:'S$',AED:'AED ',SAR:'SAR ',EGP:'E£',MXN:'MX$',PHP:'₱',PKR:'₨',BDT:'৳',TZS:'TSh ',UGX:'USh ',RWF:'RF',ETB:'Br',CHF:'CHF ',SEK:'kr',NOK:'kr',DKK:'kr'};
-const BASE_USD=[500,1500,3000];
-let userCurrency='USD',userSymbol='$',fxRate=1;
-
-function fmt(usd){const c=Math.round(usd*fxRate);return userSymbol+c.toLocaleString();}
-
-function updateFees(){
-  ['fp0','fp1','fp2'].forEach((id,i)=>{const el=document.getElementById(id);if(el)el.textContent=fmt(BASE_USD[i]);});
-  document.getElementById('currLabel').textContent=userCurrency;
-  document.getElementById('amtCurrLabel').textContent=userCurrency;
-  const sel=document.querySelector('#feeList li.selected');
-  if(sel&&parseFloat(sel.dataset.usd)>0)document.getElementById('pay-amount').value=Math.round(parseFloat(sel.dataset.usd)*fxRate);
-}
-
-async function detectCurrency(){
-  try{
-    const r=await fetch('https://ipapi.co/json/',{signal:AbortSignal.timeout(5000)});
-    if(!r.ok)throw new Error();
-    const d=await r.json();
-    const cc=(d.country_code||'US').toUpperCase();
-    userCurrency=CURRENCY_MAP[cc]||'USD';
-    fxRate=FX[userCurrency]||1;
-    userSymbol=SYMBOLS[userCurrency]||'$';
-    document.getElementById('currNote').textContent='Prices shown in '+userCurrency+' (detected from your location).';
-  }catch{document.getElementById('currNote').textContent='Prices shown in USD (default).';}
-  updateFees();
-}
-detectCurrency();
-
-/* ── FEE SELECTOR ── */
-function selectFee(el){
-  document.querySelectorAll('#feeList li').forEach(li=>{li.classList.remove('selected');li.setAttribute('aria-selected','false');});
-  el.classList.add('selected');el.setAttribute('aria-selected','true');
-  const usd=parseFloat(el.dataset.usd);
-  document.getElementById('pay-amount').value=usd>0?Math.round(usd*fxRate):'';
-  const m={'500':'consultation','1500':'contract','3000':'retainer','0':'invoice'};
-  document.getElementById('pay-service').value=m[el.dataset.usd]||'invoice';
-}
 
 /* ── RATE LIMITER ── */
 function checkRate(key){
@@ -533,45 +391,6 @@ function checkRate(key){
 /* ── SANITISE & VALIDATE ── */
 function san(s){return String(s).replace(/[<>"'`;&]/g,'').trim().slice(0,500);}
 function validEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e);}
-
-/* ── PAYMENT ── */
-function makePayment(){
-  const name=san(document.getElementById('pay-name').value);
-  const email=san(document.getElementById('pay-email').value);
-  const phone=san(document.getElementById('pay-phone').value);
-  const amount=parseFloat(document.getElementById('pay-amount').value);
-  const service=document.getElementById('pay-service').value;
-  if(!name||!email||!phone||!amount)return showMsg('pay-msg','Please fill in all required fields.','error');
-  if(!validEmail(email))return showMsg('pay-msg','Please enter a valid email address.','error');
-  if(amount<1)return showMsg('pay-msg','Please enter a valid amount.','error');
-  if(!checkRate('payR'))return showMsg('pay-msg','Too many attempts. Please wait 10 minutes.','error');
-  FlutterwaveCheckout({
-    public_key:"FLWPUBK_TEST-XXXXXXXXXXXXXXXXXXXX-X", // 🔁 Replace with your live Flutterwave public key
-    tx_ref:"RL-"+Date.now()+"-"+Math.random().toString(36).slice(2,7),
-    amount,currency:userCurrency,
-    payment_options:"card,banktransfer,ussd",
-    customer:{email,phone_number:phone,name},
-    meta:{service_type:service,detected_currency:userCurrency},
-    customizations:{title:"Ryan & Lauren LLP",description:"Legal services: "+service,logo:"https://yourwebsite.com/logo.png"}, // 🔁 Replace logo URL
-    callback:function(res){if(res.status==="successful")alert("✅ Payment successful!\nTransaction ID: "+res.transaction_id+"\n\nWe will confirm your appointment shortly via email.");},
-    onclose:function(){}
-  });
-}
-
-/* ── INVOICE REQUEST ── */
-function submitInvoiceRequest(){
-  const name=san(document.getElementById('inv-name').value);
-  const email=san(document.getElementById('inv-email').value);
-  const service=san(document.getElementById('inv-service').value);
-  const detail=san(document.getElementById('inv-detail').value);
-  const honey=document.querySelector('#invoiceForm [name="_honey"]').value;
-  if(honey)return;
-  if(!name||!email||!service||!detail)return showMsg('inv-msg','Please fill in all required fields.','error');
-  if(!validEmail(email))return showMsg('inv-msg','Please enter a valid email address.','error');
-  if(!checkRate('invR'))return showMsg('inv-msg','Too many requests. Please wait 10 minutes.','error');
-  showMsg('inv-msg','Your invoice request has been received. We will respond within 24 hours.','success');
-  document.getElementById('invoiceForm').reset();
-}
 
 /* ── CONTACT FORM ── */
 function submitContact(){
