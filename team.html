@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team - Ryan &amp; Lauren LLP</title>
+<meta name="description" content="Meet the attorneys of Ryan &amp; Lauren LLP, including partners, senior associates, and associates across practice areas.">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(self)">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self'; form-action 'self' https://formsubmit.co;">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold:#d4a843; --gold-light:#e2c97e; --dark:#0a0a0a; --dark2:#111111;
+  --dark3:#1c1c1c; --border:rgba(201,168,76,0.25); --text:#e8e5de; --muted:#b0ada4; --focus:#f0c060;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:'DM Sans',sans-serif;background:var(--dark);color:var(--text);overflow-x:hidden;line-height:1.6;}
+.skip-link{position:absolute;top:-100px;left:16px;padding:10px 20px;background:var(--gold);color:var(--dark);font-weight:600;font-size:14px;z-index:9999;text-decoration:none;border-radius:0 0 4px 4px;transition:top .2s;}
+.skip-link:focus{top:0;}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;}
+header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:20px 60px;background:rgba(10,10,10,0.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
+.logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;letter-spacing:2px;color:var(--gold);text-decoration:none;}
+.logo span{color:var(--text);font-weight:400;}
+.menu-toggle{display:none;background:none;border:1px solid var(--border);color:var(--text);padding:8px 12px;cursor:pointer;font-size:18px;line-height:1;}
+nav{display:flex;align-items:center;gap:28px;}
+nav a{text-decoration:none;color:var(--muted);font-size:13px;letter-spacing:1px;text-transform:uppercase;transition:color .25s;padding:4px 0;}
+nav a:hover,nav a:focus-visible{color:var(--gold);}
+.nav-cta{padding:9px 22px;border:1px solid var(--gold);color:var(--gold)!important;font-size:12px!important;letter-spacing:1.5px;transition:background .25s,color .25s!important;}
+.nav-cta:hover,.nav-cta:focus-visible{background:var(--gold)!important;color:var(--dark)!important;}
+
+/* Dropdowns */
+.dropdown{position:relative;display:inline-block;}
+.dropdown-content{position:absolute;top:100%;left:0;right:0;background:var(--dark);border:1px solid var(--border);border-top:none;min-width:220px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .25s,visibility .25s,transform .25s;z-index:999;max-height:0;overflow:hidden;}
+.dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content{opacity:1;visibility:visible;transform:translateY(0);max-height:400px;}
+.dropdown-content a{color:var(--muted);padding:12px 20px;display:block;font-size:12px;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid var(--border);}
+.dropdown-content a:last-child{border-bottom:none;}
+.dropdown-content a:hover,.dropdown-content a:focus{background:var(--dark3);color:var(--gold);}
+.dropdown-btn{background:none;border:none;color:var(--muted);font-size:13px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;padding:4px 0;transition:color .25s;}
+.dropdown-btn:hover,.dropdown-btn:focus-visible{color:var(--gold);}
+.dropdown .arrow{margin-left:4px;font-size:10px;}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:130px 24px 90px;position:relative;background:linear-gradient(rgba(10,10,10,.72),rgba(10,10,10,.92)),url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;}
+.hero-eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:28px;opacity:0;animation:fadeUp .8s .2s forwards;}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,6vw,76px);font-weight:600;max-width:900px;line-height:1.1;margin-bottom:24px;opacity:0;animation:fadeUp .8s .4s forwards;color:var(--text);}
+.hero h1 em{font-style:italic;color:var(--gold);}
+.hero-sub{color:var(--muted);font-size:16px;max-width:520px;line-height:1.85;margin-bottom:42px;opacity:0;animation:fadeUp .8s .6s forwards;}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;opacity:0;animation:fadeUp .8s .8s forwards;}
+.btn{padding:14px 34px;border:1px solid var(--gold);color:var(--gold);text-decoration:none;display:inline-block;letter-spacing:1.5px;font-size:12px;text-transform:uppercase;transition:background .25s,color .25s;cursor:pointer;background:transparent;font-family:'DM Sans',sans-serif;}
+.btn:hover,.btn:focus-visible{background:var(--gold);color:var(--dark);}
+.btn-primary{background:var(--gold);color:var(--dark);border:1px solid var(--gold);padding:14px 34px;letter-spacing:1.5px;font-size:12px;text-transform:uppercase;transition:background .25s,color .25s;cursor:pointer;text-decoration:none;display:inline-block;font-family:'DM Sans',sans-serif;font-weight:500;}
+.btn-primary:hover,.btn-primary:focus-visible{background:transparent;color:var(--gold);}
+.trust-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:22px 60px;display:flex;justify-content:center;align-items:center;gap:44px;flex-wrap:wrap;background:var(--dark2);}
+.trust-strip span{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);}
+.trust-strip span::before{content:"â€”  ";color:var(--gold);}
+section{padding:100px 60px;max-width:1200px;margin:auto;}
+.section-label{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block;}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,44px);font-weight:600;margin-bottom:24px;line-height:1.2;color:var(--text);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.about-text p{color:var(--muted);line-height:1.9;font-size:15px;margin-bottom:16px;}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.stat{border:1px solid var(--border);padding:28px;background:var(--dark2);}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:42px;color:var(--gold);display:block;line-height:1;margin-bottom:8px;}
+.stat-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);}
+.clients-section{background:var(--dark2);padding:70px 60px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.clients-inner{max-width:1200px;margin:auto;text-align:center;}
+.clients-inner p{color:var(--muted);font-size:13px;margin-bottom:40px;}
+.marquee-controls{display:flex;justify-content:flex-end;margin-bottom:14px;}
+.marquee-pause-btn{background:transparent;border:1px solid var(--border);color:var(--muted);font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:7px 16px;cursor:pointer;transition:border-color .25s,color .25s;}
+.marquee-pause-btn:hover,.marquee-pause-btn:focus-visible{border-color:var(--gold);color:var(--gold);}
+.clients-marquee-wrapper{overflow:hidden;position:relative;mask-image:linear-gradient(to right,transparent,black 12%,black 88%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,black 12%,black 88%,transparent);}
+.clients-marquee{display:flex;width:max-content;animation:marquee 32s linear infinite;}
+.clients-marquee.paused{animation-play-state:paused;}
+.clients-marquee:hover{animation-play-state:paused;}
+.client-name{font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:2px;color:var(--muted);padding:0 40px;white-space:nowrap;transition:color .3s;border-right:1px solid var(--border);}
+.client-name:hover{color:var(--gold);}
+@keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;}
+  .clients-marquee{animation:none;overflow-x:auto;flex-wrap:wrap;width:100%;justify-content:center;gap:8px;padding:10px 0;}
+  .hero-eyebrow,.hero h1,.hero-sub,.hero-btns{opacity:1;transform:none;animation:none;}
+}
+.services-wrap{background:var(--dark2);padding:100px 60px;border-top:1px solid var(--border);}
+.services-inner{max-width:1200px;margin:auto;}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;margin-top:48px;border:1px solid var(--border);}
+.service-card{padding:38px 28px;background:var(--dark2);border:1px solid var(--border);transition:background .3s;position:relative;overflow:hidden;}
+.service-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.service-card:hover{background:var(--dark3);}
+.service-card:hover::after{width:100%;}
+.service-icon{font-size:26px;margin-bottom:16px;display:block;line-height:1;}
+.service-card h3{font-family:'Cormorant Garamond',serif;font-size:19px;margin-bottom:10px;color:var(--text);font-weight:600;}
+.service-card p{font-size:13px;color:var(--muted);line-height:1.8;}
+/* PARTNERS */
+.partners-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:48px;}
+.partner-card-wrap{display:contents;}
+.partner-card{border:1px solid var(--border);overflow:hidden;background:var(--dark2);transition:border-color .3s;cursor:pointer;width:100%;text-align:left;font-family:'DM Sans',sans-serif;color:var(--text);display:block;padding:0;}
+.partner-card:hover{border-color:var(--gold);}
+.partner-card:focus-visible{outline:3px solid var(--focus);outline-offset:3px;}
+.partner-card img{width:100%;height:320px;object-fit:cover;filter:grayscale(25%);transition:filter .4s,transform .4s;display:block;}
+.partner-card:hover img{filter:grayscale(0%);transform:scale(1.03);}
+.partner-info{padding:24px 28px;}
+.partner-info h3{font-family:'Cormorant Garamond',serif;font-size:22px;margin-bottom:6px;font-weight:600;}
+.partner-info .role{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.partner-info p{font-size:13px;color:var(--muted);line-height:1.75;}
+.view-profile-btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);background:none;border:1px solid var(--border);padding:9px 18px;cursor:pointer;transition:border-color .25s,background .25s;font-family:'DM Sans',sans-serif;}
+.view-profile-btn:hover{border-color:var(--gold);background:rgba(201,168,76,0.08);}
+.view-profile-btn svg{width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:2;transition:transform .25s;}
+.partner-card:hover .view-profile-btn svg{transform:translateX(4px);}
+/* ASSOCIATES */
+.associates-subhead{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.5vw,30px);font-weight:600;margin:60px 0 28px;color:var(--text);padding-bottom:16px;border-bottom:1px solid var(--border);}
+.associates-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;}
+.assoc-card-wrap{display:contents;}
+.associate-card{border:1px solid var(--border);background:var(--dark2);padding:28px;transition:border-color .3s,background .3s;cursor:pointer;width:100%;text-align:left;font-family:'DM Sans',sans-serif;color:var(--text);display:block;}
+.associate-card:hover{border-color:var(--gold);background:var(--dark3);}
+.associate-card:focus-visible{outline:3px solid var(--focus);outline-offset:3px;}
+.assoc-initials{width:72px;height:72px;border-radius:50%;background:var(--dark3);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--gold);margin-bottom:16px;transition:border-color .3s;}
+.associate-card:hover .assoc-initials{border-color:var(--gold);}
+.associate-card h4{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;margin-bottom:4px;color:var(--text);}
+.associate-card .assoc-role{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:block;}
+.associate-card p{font-size:13px;color:var(--muted);line-height:1.75;}
+.assoc-view{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);opacity:.7;transition:opacity .25s;}
+.associate-card:hover .assoc-view{opacity:1;}
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.82);z-index:900;display:flex;align-items:flex-start;justify-content:center;padding:60px 24px 40px;overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;backdrop-filter:blur(6px);}
+.modal-overlay.open{opacity:1;visibility:visible;}
+.modal-box{background:var(--dark2);border:1px solid var(--border);width:100%;max-width:820px;position:relative;animation:modalIn .35s ease forwards;margin:auto;}
+@keyframes modalIn{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+.modal-close{position:absolute;top:20px;right:24px;background:none;border:1px solid var(--border);color:var(--muted);font-size:20px;line-height:1;padding:6px 10px;cursor:pointer;transition:border-color .2s,color .2s;z-index:2;}
+.modal-close:hover,.modal-close:focus-visible{border-color:var(--gold);color:var(--gold);}
+.modal-hero{display:grid;grid-template-columns:260px 1fr;}
+.modal-photo{width:100%;height:100%;object-fit:cover;display:block;min-height:320px;filter:grayscale(15%);transition:filter .4s;}
+.modal-box:hover .modal-photo{filter:grayscale(0%);}
+.modal-header{padding:40px 36px 28px;border-bottom:1px solid var(--border);display:flex;flex-direction:column;justify-content:flex-end;}
+.modal-name{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;line-height:1.1;margin-bottom:8px;}
+.modal-role-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);}
+.modal-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
+.modal-tag{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:5px 12px;}
+.modal-body{padding:36px;}
+.modal-tabs{display:flex;gap:0;border-bottom:1px solid var(--border);margin-bottom:32px;}
+.modal-tab{background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:10px 20px;cursor:pointer;transition:color .2s,border-color .2s;margin-bottom:-1px;}
+.modal-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
+.modal-tab:hover{color:var(--gold);}
+.modal-panel{display:none;}
+.modal-panel.active{display:block;}
+.bio-text{color:var(--muted);font-size:14px;line-height:2;}
+.bio-text p{margin-bottom:16px;}
+.bio-text p:last-child{margin-bottom:0;}
+.portfolio-list{display:flex;flex-direction:column;gap:16px;}
+.portfolio-item{border-left:2px solid var(--gold);padding:16px 20px;background:rgba(201,168,76,0.04);border-top:1px solid var(--border);border-right:1px solid var(--border);border-bottom:1px solid var(--border);}
+.portfolio-item .pi-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;display:block;}
+.portfolio-item h4{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;margin-bottom:6px;}
+.portfolio-item p{font-size:13px;color:var(--muted);line-height:1.75;}
+.modal-contact-link{display:inline-flex;align-items:center;gap:10px;margin-top:24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--border);padding:10px 22px;transition:border-color .25s,background .25s;}
+.modal-contact-link:hover,.modal-contact-link:focus-visible{border-color:var(--gold);background:rgba(201,168,76,0.08);}
+/* ASSOC MODAL HEADER */
+.assoc-modal-header{padding:36px 36px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:28px;}
+.assoc-modal-initials{width:88px;height:88px;border-radius:50%;background:var(--dark3);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--gold);flex-shrink:0;}
+
+.insights-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:48px;}
+.insight-card{border:1px solid var(--border);padding:34px 26px;background:var(--dark2);transition:border-color .3s,background .3s;}
+.insight-card:hover{border-color:var(--gold);background:var(--dark3);}
+.insight-tag{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block;}
+.insight-card h3{font-family:'Cormorant Garamond',serif;font-size:20px;margin-bottom:12px;line-height:1.3;font-weight:600;}
+.insight-card p{font-size:13px;color:var(--muted);line-height:1.8;}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start;}
+.contact-info>p{color:var(--muted);font-size:14px;line-height:1.9;margin-bottom:32px;}
+.contact-detail{display:flex;flex-direction:column;gap:18px;}
+.contact-item{border-left:2px solid var(--gold);padding-left:16px;}
+.contact-item .label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;display:block;}
+.contact-item a,.contact-item span{color:var(--text);font-size:14px;text-decoration:none;}
+.contact-item a:hover{color:var(--gold);}
+.contact-form{display:flex;flex-direction:column;gap:14px;}
+.contact-form textarea{resize:vertical;}
+.contact-form button{padding:14px;border:1px solid var(--gold);background:transparent;color:var(--gold);font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:background .25s,color .25s;}
+.contact-form button:hover,.contact-form button:focus-visible{background:var(--gold);color:var(--dark);}
+.hp-field{display:none!important;visibility:hidden;}
+.form-msg{font-size:13px;padding:12px 16px;display:none;margin-top:4px;}
+.form-msg.success{background:rgba(100,200,100,.1);color:#7ec87e;border:1px solid rgba(100,200,100,.2);}
+.form-msg.error{background:rgba(200,80,80,.1);color:#e07070;border:1px solid rgba(200,80,80,.2);}
+.divider{max-width:1200px;margin:0 auto;border:none;border-top:1px solid var(--border);}
+footer{border-top:1px solid var(--border);padding:48px 60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;background:var(--dark2);}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);letter-spacing:2px;}
+footer p{font-size:12px;color:var(--muted);}
+footer nav{gap:20px;}
+footer nav a{font-size:11px;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+@media(max-width:900px){
+  header{padding:16px 24px;}
+  .menu-toggle{display:block;}
+  nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(10,10,10,.98);padding:20px 24px 28px;gap:20px;border-bottom:1px solid var(--border);}
+  nav.open{display:flex;}
+  nav a{font-size:14px;}
+  section{padding:70px 24px;}
+  .services-wrap,.clients-section{padding:70px 24px;}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:40px;}
+  .trust-strip{padding:20px 24px;gap:20px;}
+  footer{padding:32px 24px;flex-direction:column;text-align:center;}
+  footer nav{justify-content:center;}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header role="banner">
+  <a href="#" class="logo" aria-label="Ryan and Lauren LLP â€” Home">Ryan <span>&amp;</span> Lauren <span style="font-size:13px;letter-spacing:3px;">LLP</span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav" onclick="toggleMenu(this)">â˜°</button>
+  <nav id="main-nav" role="navigation" aria-label="Main navigation">
+    <div class="dropdown">
+      <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">About <span class="arrow">â–¾</span></button>
+      <div class="dropdown-content" role="menu">
+        <a href="about.html" target="_blank" rel="noopener">About Us</a>
+        <a href="community.html" target="_blank" rel="noopener">Community</a>
+        <a href="diversity-equity-inclusion.html" target="_blank" rel="noopener">Diversity, Equity & Inclusion</a>
+        <a href="pro-bono.html" target="_blank" rel="noopener">Pro Bono</a>
+        <a href="sustainability.html" target="_blank" rel="noopener">Sustainability</a>
+        <a href="history.html" target="_blank" rel="noopener">History</a>
+        <a href="contact.html" target="_blank" rel="noopener">Contact</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">Services <span class="arrow">â–¾</span></button>
+      <div class="dropdown-content" role="menu">
+        <a href="#svc-accountant">Accountant & Professional Liability</a>
+        <a href="#svc-admin">Administrative & Regulatory Law</a>
+        <a href="#svc-antitrust">Antitrust Advice & Advocacy</a>
+        <a href="#svc-appeals">Appeals</a>
+        <a href="#svc-bankruptcy">Bankruptcy & Restructuring</a>
+        <a href="#svc-benefit">Benefit Company Law</a>
+        <a href="#svc-immigration">Business Immigration</a>
+        <a href="#svc-business">Business Law</a>
+        <a href="#svc-cannabis">Cannabis</a>
+        <a href="#svc-constitutional">Constitutional and Compliance Law</a>
+        <a href="#svc-contract">Contract & Commercial Disputes</a>
+        <a href="#svc-corporate-disputes">Corporate & Business Owner Disputes</a>
+        <a href="#svc-finance">Corporate Finance & Transactions</a>
+        <a href="#svc-governance">Corporate Governance</a>
+        <a href="#svc-energy">Energy, Utilities & Renewables</a>
+        <a href="#svc-environmental">Environmental & Natural Resources</a>
+        <a href="#svc-estate">Estate Planning & Advocacy</a>
+        <a href="#svc-compensation">Executive Compensation & Employee Benefits</a>
+        <a href="#svc-fiduciary">Fiduciary Representation & Litigation</a>
+        <a href="#svc-financial">Financial Services</a>
+        <a href="#svc-government">Government Affairs</a>
+        <a href="#svc-privacy">Information Privacy & Security</a>
+        <a href="#svc-insurance">Insurance Recovery</a>
+        <a href="#svc-ip">Intellectual Property</a>
+        <a href="#svc-labor">Labor & Employment</a>
+        <a href="#svc-litigation">Litigation</a>
+        <a href="#svc-gaming">Lottery & Gaming</a>
+        <a href="#svc-arbitration">Mediation & Arbitration Services</a>
+        <a href="#svc-ma">Mergers & Acquisitions</a>
+        <a href="#svc-nonprofit">Nonprofit Organizations</a>
+        <a href="#svc-products">Products Liability & Complex Torts</a>
+        <a href="#svc-realestate">Real Estate & Land Use</a>
+        <a href="#svc-realestate-disputes">Real Estate Disputes</a>
+        <a href="#svc-senior">Senior Living</a>
+        <a href="#svc-shareholder">Shareholder Disputes & Governance</a>
+        <a href="#svc-startups">Startups, Emerging Companies & Venture Capital</a>
+        <a href="#svc-tax">Tax</a>
+        <a href="#svc-trust">Trust & Probate Litigation</a>
+      </div>
+    </div>
+    <a href="team.html" aria-current="page">Team</a>
+    <div class="dropdown">
+      <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">Insights <span class="arrow">â–¾</span></button>
+      <div class="dropdown-content" role="menu">
+        <a href="news.html" target="_blank" rel="noopener">News</a>
+        <a href="blog.html" target="_blank" rel="noopener">Blog</a>
+        <a href="events.html" target="_blank" rel="noopener">Events</a>
+      </div>
+    </div>
+    <a href="index.html#clients">Clients</a>
+    <a href="index.html#contact" class="nav-cta">Consult</a>
+  </nav>
+</header>
+<main id="main-content">
+<section id="partners" class="team-page" aria-labelledby="partners-heading">
+  <span class="section-label" aria-hidden="true">Our Attorneys</span>
+  <h2 id="partners-heading">59 Attorneys. One Focus: Your Success.</h2>
+  <p style="color:var(--muted);font-size:15px;max-width:600px;margin-bottom:30px;">Our diverse team brings expertise across all practice areas, with established leaders and emerging talent working collaboratively.</p>
+
+  <!-- PARTNERS -->
+  <h3 style="font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:20px;margin:40px 0 20px;border-bottom:1px solid var(--border);padding-bottom:10px;">Partners</h3>
+  <div class="partners-grid">
+    <div class="partner-card-wrap">
+      <button class="partner-card" onclick="openModal('ryan')" aria-label="View Ryan Brennan's full profile and portfolio">
+        <img src="ryan.jpg" alt="Ryan Brennan, Co-Founder and Senior Partner" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80'">
+        <div class="partner-info">
+          <h3>Ryan Brennan</h3>
+          <span class="role">Co-Founder &amp; Senior Partner â€” Corporate &amp; Commercial Law</span>
+          <p>Specialist in corporate structuring and business law advisory with over two decades of practice.</p>
+          <span class="view-profile-btn" aria-hidden="true">View Full Profile <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </button>
+    </div>
+    <div class="partner-card-wrap">
+      <button class="partner-card" onclick="openModal('lauren')" aria-label="View Lauren Gath's full profile and portfolio">
+        <img src="lauren.jpg" alt="Lauren Gath, Co-Founder and Senior Partner" onerror="this.src='https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=600&q=80'">
+        <div class="partner-info">
+          <h3>Lauren Gath</h3>
+          <span class="role">Co-Founder &amp; Senior Partner â€” International &amp; Contract Law</span>
+          <p>Focused on contract law, compliance, and cross-border international advisory for global clients.</p>
+          <span class="view-profile-btn" aria-hidden="true">View Full Profile <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </button>
+    </div>
+    <div class="partner-card-wrap">
+      <button class="partner-card" onclick="openModal('alexander')" aria-label="View Alexander Hartwell's profile">
+        <div class="partner-info" style="padding:24px 28px;">
+          <h3>Alexander Hartwell</h3>
+          <span class="role">Partner â€” Corporate Finance & Transactions</span>
+          <p>Leads complex financial transactions and corporate advisory work for public and private companies.</p>
+          <span class="view-profile-btn" aria-hidden="true">View Full Profile <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </button>
+    </div>
+    <div class="partner-card-wrap">
+      <button class="partner-card" onclick="openModal('bianca')" aria-label="View Bianca Moretti's profile">
+        <div class="partner-info" style="padding:24px 28px;">
+          <h3>Bianca Moretti</h3>
+          <span class="role">Partner â€” International Arbitration</span>
+          <p>Specializes in international commercial arbitration and cross-border dispute resolution.</p>
+          <span class="view-profile-btn" aria-hidden="true">View Full Profile <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- SENIOR ASSOCIATES -->
+  <h2 class="associates-subhead">Senior Associates</h2>
+  <div class="associates-grid">
+    <div class="assoc-card-wrap">
+      <button class="associate-card" onclick="openModal('todd')" aria-label="View Todd Bradford's profile">
+        <div class="assoc-initials" aria-hidden="true">TB</div>
+        <h4>Todd Bradford</h4>
+        <span class="assoc-role">Senior Associate â€” Corporate, M&amp;A &amp; Compliance</span>
+        <p>Advises on mergers, acquisitions, corporate governance, compliance, and international advisory for mid-market and enterprise clients.</p>
+        <span class="assoc-view" aria-hidden="true">View profile â†’</span>
+      </button>
+    </div>
+    <div class="assoc-card-wrap">
+      <button class="associate-card" onclick="openModal('odette')" aria-label="View Odette Saffron's profile">
+        <div class="assoc-initials" aria-hidden="true">OS</div>
+        <h4>Odette Saffron</h4>
+        <span class="assoc-role">Senior Associate â€” International &amp; Compliance</span>
+        <p>Specialist in cross-border regulatory compliance and international trade law across multiple jurisdictions.</p>
+        <span class="assoc-view" aria-hidden="true">View profile â†’</span>
+      </button>
+    </div>
+    <div class="assoc-card-wrap">
+      <button class="associate-card" onclick="openModal('maisie')" aria-label="View Maisie Blake's profile">
+        <div class="assoc-initials" aria-hidden="true">MB</div>
+        <h4>Maisie Blake</h4>
+        <span class="assoc-role">Senior Associate â€” Contract &amp; Commercial</span>
+        <p>Drafts and negotiates high-value commercial contracts and advises on dispute resolution strategy.</p>
+        <span class="assoc-view" aria-hidden="true">View profile â†’</span>
+      </button>
+    </div>
+    <div class="assoc-card-wrap">
+      <button class="associate-card" onclick="openModal('caleb')" aria-label="View Caleb Nakamura's profile">
+        <div class="assoc-initials" aria-hidden="true">CN</div>
+        <h4>Caleb Nakamura</h4>
+        <span class="assoc-role">Associate â€” Technology & IP</span>
+        <p>Focuses on technology contracts, intellectual property matters, and data privacy compliance.</p>
+        <span class="assoc-view" aria-hidden="true">View profile â†’</span>
+      </button>
+    </div>
+    <div class="assoc-card-wrap">
+      <button class="associate-card" onclick="openModal('delia')" aria-label="View Delia Rosenberg's profile">
+        <div class="assoc-initials" aria-hidden="true">DR</div>
+        <h4>Delia Rosenberg</h4>
+        <span class="assoc-role">Associate â€” Real Estate & Corporate</span>
+        <p>Handles commercial real estate transactions and corporate real estate advisory.</p>
+        <span class="assoc-view" aria-hidden="true">View profile â†’</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ASSOCIATES -->
+  <h2 class="associates-subhead">Associates</h2>
+  <div class="associates-grid" id="associates-grid"></div>
+</section>
+</main>
+<footer role="contentinfo">
+  <div class="footer-logo">Ryan & Lauren LLP</div>
+  <p>Â© 2026 Ryan & Lauren LLP. All rights reserved.</p>
+  <nav aria-label="Footer navigation">
+    <a href="about.html">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="accessibility.html">Accessibility</a>
+  </nav>
+  <p style="font-size:11px;">Confidential Â· Strategic Â· Results-Driven</p>
+</footer>
+
+<!-- â•â•â• RYAN BRENNAN MODAL â•â•â• -->
+<div class="modal-overlay" id="modal-ryan" role="dialog" aria-modal="true" aria-labelledby="mname-ryan" onclick="overlayClose(event,'ryan')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('ryan')" aria-label="Close Ryan Brennan profile">âœ•</button>
+    <div class="modal-hero">
+      <img class="modal-photo" src="ryan.jpg" alt="Ryan Brennan" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80'">
+      <div class="modal-header">
+        <p id="mname-ryan" class="modal-name">Ryan Brennan</p>
+        <span class="modal-role-label">Co-Founder &amp; Senior Partner</span>
+        <div class="modal-tags">
+          <span class="modal-tag">Corporate Law</span>
+          <span class="modal-tag">M&amp;A</span>
+          <span class="modal-tag">Commercial</span>
+          <span class="modal-tag">Governance</span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-tabs" role="tablist">
+        <button class="modal-tab active" role="tab" aria-selected="true" aria-controls="ryan-bio" onclick="switchTab('ryan','bio',this)">Biography</button>
+        <button class="modal-tab" role="tab" aria-selected="false" aria-controls="ryan-portfolio" onclick="switchTab('ryan','portfolio',this)">Notable Work</button>
+      </div>
+      <div id="ryan-bio" class="modal-panel active" role="tabpanel" aria-labelledby="ryan-tab-bio">
+        <div class="bio-text">
+          <p>Ryan Brennan co-founded Ryan &amp; Lauren LLP over two decades ago with a singular vision: to build a firm that pairs the depth of a large institution with the agility and personalised service of a boutique practice. His approach blends rigorous legal analysis with sharp commercial instincts â€” a combination that has made him one of the most sought-after corporate advisors in the region.</p>
+          <p>Called to the Bar in 2001, Ryan spent his early career at two of the country's largest commercial firms, where he advised FTSE-listed clients on major restructurings and cross-border transactions. He co-founded the firm in 2006 alongside Lauren Gath, and it quickly established itself as a trusted name in mid-market and enterprise corporate work.</p>
+          <p>Ryan specialises in mergers &amp; acquisitions, joint ventures, shareholder disputes, and corporate governance. He has advised boards through IPO processes, managed hostile takeover defences, and structured complex multi-jurisdictional deals across North America, Europe, and Sub-Saharan Africa. His client base spans technology start-ups, energy companies, financial institutions, and family-owned conglomerates.</p>
+          <p>Ryan is a member of the International Bar Association's Corporate and M&amp;A Committee, a frequent speaker at legal conferences, and a contributing author to several commercial law journals. He holds an LLB from University College London and an LLM (Corporate Law) from Columbia Law School.</p>
+        </div>
+        <a href="#contact" class="modal-contact-link" onclick="closeModal('ryan')">Schedule a Consultation â†’</a>
+      </div>
+      <div id="ryan-portfolio" class="modal-panel" role="tabpanel">
+        <div class="portfolio-list">
+          <div class="portfolio-item">
+            <span class="pi-label">M&amp;A Â· 2024</span>
+            <h4>Cross-Border Acquisition â€” Energy Sector</h4>
+            <p>Lead counsel for a European energy group on the $340M acquisition of a Sub-Saharan African independent oil producer, navigating multi-jurisdictional regulatory approvals and complex title due diligence.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Corporate Governance Â· 2023</span>
+            <h4>Board Restructuring â€” Global Financial Institution</h4>
+            <p>Advised a Tier-1 bank's board through a full governance overhaul following a regulatory review, including director liability analysis, committee reformation, and updated Articles of Association.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Joint Venture Â· 2022</span>
+            <h4>Technology JV â€” North American Market Entry</h4>
+            <p>Structured and negotiated a strategic joint venture between a West African fintech and a North American payments infrastructure provider, including IP licensing, profit-sharing frameworks, and exit mechanisms.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Dispute Resolution Â· 2021</span>
+            <h4>Shareholder Dispute â€” Family-Owned Conglomerate</h4>
+            <p>Acted for a minority shareholder group in a contentious buy-out dispute, securing a favourable settlement through a combination of litigation strategy and mediated negotiation.</p>
+          </div>
+        </div>
+        <a href="#contact" class="modal-contact-link" onclick="closeModal('ryan')">Discuss Your Matter â†’</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- â•â•â• LAUREN GATH MODAL â•â•â• -->
+<div class="modal-overlay" id="modal-lauren" role="dialog" aria-modal="true" aria-labelledby="mname-lauren" onclick="overlayClose(event,'lauren')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('lauren')" aria-label="Close Lauren Gath profile">âœ•</button>
+    <div class="modal-hero">
+      <img class="modal-photo" src="lauren.jpg" alt="Lauren Gath" onerror="this.src='https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=600&q=80'">
+      <div class="modal-header">
+        <p id="mname-lauren" class="modal-name">Lauren Gath</p>
+        <span class="modal-role-label">Co-Founder &amp; Senior Partner</span>
+        <div class="modal-tags">
+          <span class="modal-tag">International Law</span>
+          <span class="modal-tag">Contract</span>
+          <span class="modal-tag">Compliance</span>
+          <span class="modal-tag">Arbitration</span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-tabs" role="tablist">
+        <button class="modal-tab active" role="tab" aria-selected="true" aria-controls="lauren-bio" onclick="switchTab('lauren','bio',this)">Biography</button>
+        <button class="modal-tab" role="tab" aria-selected="false" aria-controls="lauren-portfolio" onclick="switchTab('lauren','portfolio',this)">Notable Work</button>
+      </div>
+      <div id="lauren-bio" class="modal-panel active" role="tabpanel">
+        <div class="bio-text">
+          <p>Lauren Gath is widely regarded as one of the foremost international contract and compliance attorneys in her field. As Co-Founder of Ryan &amp; Lauren LLP, she has shaped the firm's international practice from its earliest days â€” building a reputation for combining meticulous legal drafting with an instinctive understanding of the commercial pressures her clients face.</p>
+          <p>Lauren was admitted to the Bar in 2002 and trained in private practice before completing a secondment with the trade law division of a prominent multilateral institution, giving her deep fluency in the mechanics of international regulatory frameworks. She co-founded the firm in 2006 and has since led its international and compliance practice through a period of sustained growth.</p>
+          <p>Her practice spans complex commercial contract drafting and negotiation, cross-border compliance advisory, international arbitration support, and regulatory risk management for clients operating across multiple jurisdictions. She has advised clients on contracts worth in excess of $1 billion in aggregate, and has guided multinational corporations through regulatory investigations in North America, the EU, and Africa.</p>
+          <p>Lauren is a Fellow of the Chartered Institute of Arbitrators, a member of the ICC Commission on Arbitration and ADR, and regularly publishes on international trade law and contract compliance. She holds an LLB from King's College London and an LLM (International Commercial Law) from the London School of Economics.</p>
+        </div>
+        <a href="#contact" class="modal-contact-link" onclick="closeModal('lauren')">Schedule a Consultation â†’</a>
+      </div>
+      <div id="lauren-portfolio" class="modal-panel" role="tabpanel">
+        <div class="portfolio-list">
+          <div class="portfolio-item">
+            <span class="pi-label">International Contract Â· 2025</span>
+            <h4>Master Services Agreement â€” Global Technology Procurement</h4>
+            <p>Drafted and negotiated a multi-year MSA for a Fortune 500 technology company entering the African market, covering localisation obligations, data sovereignty requirements, and force majeure provisions across nine jurisdictions.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Compliance Advisory Â· 2024</span>
+            <h4>Parallel Regulatory Investigation â€” Financial Services</h4>
+            <p>Advised a major insurance conglomerate through a simultaneous regulatory investigation by the SEC and the FCA, coordinating counsel across five jurisdictions and managing voluntary disclosure strategy.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">International Arbitration Â· 2023</span>
+            <h4>ICC Arbitration â€” Infrastructure Dispute</h4>
+            <p>Led the claimant's legal team in a $180M ICC arbitration arising from a terminated infrastructure concession agreement, securing a full award in favour of the client within 14 months.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Trade Compliance Â· 2022</span>
+            <h4>Export Control Programme â€” Defence Supplier</h4>
+            <p>Designed and implemented a comprehensive export control compliance programme for a dual-use technology manufacturer, including staff training, internal audit protocols, and regulatory liaison procedures.</p>
+          </div>
+        </div>
+        <a href="#contact" class="modal-contact-link" onclick="closeModal('lauren')">Discuss Your Matter â†’</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- â•â•â• ALEXANDER HARTWELL MODAL â•â•â• -->
+<div class="modal-overlay" id="modal-alexander" role="dialog" aria-modal="true" aria-labelledby="mname-alexander" onclick="overlayClose(event,'alexander')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('alexander')" aria-label="Close Alexander Hartwell profile">âœ•</button>
+    <div class="modal-hero">
+      <img class="modal-photo" src="alexander.jpg" alt="Alexander Hartwell" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80'">
+      <div class="modal-header">
+        <p id="mname-alexander" class="modal-name">Alexander Hartwell</p>
+        <span class="modal-role-label">Partner</span>
+        <div class="modal-tags">
+          <span class="modal-tag">Corporate Finance</span>
+          <span class="modal-tag">M&amp;A</span>
+          <span class="modal-tag">Securities</span>
+          <span class="modal-tag">Governance</span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-tabs" role="tablist">
+        <button class="modal-tab active" role="tab" aria-selected="true" aria-controls="alexander-bio" onclick="switchTab('alexander','bio',this)">Biography</button>
+        <button class="modal-tab" role="tab" aria-selected="false" aria-controls="alexander-portfolio" onclick="switchTab('alexander','portfolio',this)">Notable Work</button>
+      </div>
+      <div id="alexander-bio" class="modal-panel active" role="tabpanel">
+        <div class="bio-text">
+          <p>Alexander Hartwell is a Partner in the Corporate Finance &amp; Transactions practice, with over 16 years of experience advising public and private companies on complex financial deals and strategic corporate matters. His work spans cross-border acquisitions, equity and debt financing, and intricate corporate restructuring for clients across Europe, North America, and Asia. Alexander is known for his pragmatic approach and ability to navigate regulatory complexities while maintaining commercial momentum.</p>
+          <p>Before joining Ryan &amp; Lauren LLP, Alexander spent a decade at a leading international law firm where he led the corporate finance team, advising on transactions exceeding Â£10 billion in aggregate value. He has represented clients in the technology, energy, and financial services sectors, handling everything from venture capital rounds to multijurisdictional mergers.</p>
+          <p>Alexander's recent practice includes advising on the â‚¬850M acquisition of a pan-European renewable energy platform, structuring a Â£500M venture capital fund for a sovereign wealth entity, and leading a cross-border takeover defense for a FTSE-100 constituent. He also counsels boards on securities law compliance, corporate governance best practices, and public disclosure obligations.</p>
+          <p>Alexander is a Fellow of the Institute of Chartered Secretaries and Administrators, a regular speaker at the International Corporate Governance conference, and has published extensively on capital markets regulation. He holds an LLB from King's College London and an LLM (Corporate Governance) from the London School of Economics, and is qualified in England &amp; Wales and New York.</p>
+        </div>
+        <a href="#contact" class="modal-contact-link" onclick="closeModal('alexander')">Schedule a Consultation â†’</a>
+      </div>
+      <div id="alexander-portfolio" class="modal-panel" role="tabpanel">
+        <div class="portfolio-list">
+          <div class="portfolio-item">
+            <span class="pi-label">Cross-Border Acquisition Â· 2024</span>
+            <h4>â‚¬850M Renewable Energy Portfolio</h4>
+            <p>Lead counsel for a sovereign wealth fund on the acquisition of a pan-European renewable energy platform across six jurisdictions, handling due diligence, regulatory approvals, and multi-lender financing.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Venture Capital Â· 2023</span>
+            <h4>Â£500M Fund Structure â€” Sovereign Investor</h4>
+            <p>Structured and launched a venture capital fund for a Middle Eastern sovereign investor, including partnership agreements, investor rights, and cross-border tax optimization strategies.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Takeover Defense Â· 2022</span>
+            <h4>Hostile Bid Defense â€” FTSE-100 Biotech</h4>
+            <p>Represented a FTSE-100 biotechnology company against a hostile takeover, orchestrating a white knight strategy, shareholder engagement, and regulatory challenges that ultimately defeated the bid.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Securities Compliance Â· 2021</span>
+            <h4>IPO and Ongoing Disclosure â€” Nasdaq Listco</h4>
+            <p>Advised a technology company on its IPO process and subsequent compliance, including Form 20-F filings, Sarbanes-Oxley implementation, and continuous disclosure obligations.</p>
+          </div>
+        </div>
+        <a href="#contact" class="modal-contact-link" onclick="closeModal('alexander')">Discuss Your Matter â†’</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- â•â•â• BIANCA MORETTI MODAL â•â•â• -->
+<div class="modal-overlay" id="modal-bianca" role="dialog" aria-modal="true" aria-labelledby="mname-bianca" onclick="overlayClose(event,'bianca')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('bianca')" aria-label="Close Bianca Moretti profile">âœ•</button>
+    <div class="modal-hero">
+      <img class="modal-photo" src="bianca.jpg" alt="Bianca Moretti" onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80'">
+      <div class="modal-header">
+        <p id="mname-bianca" class="modal-name">Bianca Moretti</p>
+        <span class="modal-role-label">Partner</span>
+        <div class="modal-tags">
+          <span class="modal-tag">Arbitration</span>
+          <span class="modal-tag">International Disputes</span>
+          <span class="modal-tag">Cross-Border</span>
+          <span class="modal-tag">Commercial</span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-tabs" role="tablist">
+        <button class="modal-tab active" role="tab" aria-selected="true" aria-controls="bianca-bio" onclick="switchTab('bianca','bio',this)">Biography</button>
+        <button class="modal-tab" role="tab" aria-selected="false" aria-controls="bianca-portfolio" onclick="switchTab('bianca','portfolio',this)">Notable Work</button>
+      </div>
+      <div id="bianca-bio" class="modal-panel active" role="tabpanel">
+        <div class="bio-text">
+          <p>Bianca Moretti is a Partner specializing in international commercial arbitration and cross-border dispute resolution. With nearly two decades of experience, she has acted as counsel in over 80 arbitrations under ICC, SIAC, and LCIA rules, representing both corporations and States in disputes valued from $10 million to over $2 billion. Her practice emphasizes complex, multijurisdictional conflicts with significant political or regulatory dimensions.</p>
+          <p>Admitted to the Bar in 2006, Bianca began her career at a top-tier international firm in Paris before moving to London to head the arbitration practice at a global law firm. She joined Ryan &amp; Lauren LLP in 2019 to launch and lead our International Arbitration group, bringing a reputation for strategic case management and persuasive advocacy.</p>
+          <p>Recent highlights include representing an East African government in a $950M investment treaty dispute, securing a $420M award for a mining conglomerate in a contentious arbitration, and serving as a sole arbitrator in a complex construction dispute. Bianca is also frequently appointed as an arbitrator by parties and institutions alike, noted for her decisiveness and procedural acumen.</p>
+          <p>Bianca holds degrees from the University of Bologna and the College of Europe (Bruges), and is a member of the ICC Commission on Arbitration and ADR, the LCIA Court, and the International Council for Commercial Arbitration. She is fluent in Italian, French, English, and Spanish.</p>
+        </div>
+        <a href="#contact" class="modal-contact-link" onclick="closeModal('bianca')">Schedule a Consultation â†’</a>
+      </div>
+      <div id="bianca-portfolio" class="modal-panel" role="tabpanel">
+        <div class="portfolio-list">
+          <div class="portfolio-item">
+            <span class="pi-label">International Arbitration Â· 2024</span>
+            <h4>$950M Investment Treaty Dispute â€” East Africa</h4>
+            <p>Lead counsel for an East African government in an ICSID arbitration brought by a mining consortium over a revoked exploration license, successfully limiting liability to under $150M.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Commercial Arbitration Â· 2023</span>
+            <h4>$420M Award â€” Infrastructure Consortium</h4>
+            <p>Acted for a European infrastructure consortium in an ICC arbitration against a state-owned entity for breach of a PPP agreement, obtaining a full award with interest.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Arbitration (as Arbitrator) Â· 2022</span>
+            <h4>Sole Arbitrator â€” Construction Dispute</h4>
+            <p>Appointed as sole arbitrator in a complex international construction dispute involving delays and defective works, rendering a detailed award within six weeks of the hearing.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Energy Dispute Â· 2021</span>
+            <h4>Power Purchase Agreement Arbitration</h4>
+            <p>Represented a renewable energy developer in an arbitration against a national utility for repudiation of a 25-year PPA, securing damages and restitution of assets.</p>
+          </div>
+        </div>
+        <a href="#contact" class="modal-contact-link" onclick="closeModal('bianca')">Discuss Your Matter â†’</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- â•â•â• TODD BRADFORD MODAL â•â•â• -->
+<div class="modal-overlay" id="modal-todd" role="dialog" aria-modal="true" aria-labelledby="mname-todd" onclick="overlayClose(event,'todd')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('todd')" aria-label="Close Todd Bradford profile">âœ•</button>
+    <div class="assoc-modal-header">
+      <div class="assoc-modal-initials" aria-hidden="true">TB</div>
+      <div>
+        <p id="mname-todd" class="modal-name" style="font-size:28px;">Todd Bradford</p>
+        <span class="modal-role-label">Associate Attorney</span>
+        <div class="modal-tags" style="margin-top:12px;">
+          <span class="modal-tag">Corporate</span>
+          <span class="modal-tag">M&amp;A</span>
+          <span class="modal-tag">Compliance</span>
+          <span class="modal-tag">International</span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-tabs" role="tablist">
+        <button class="modal-tab active" role="tab" aria-selected="true" aria-controls="todd-bio" onclick="switchTab('todd','bio',this)">Biography</button>
+        <button class="modal-tab" role="tab" aria-selected="false" aria-controls="todd-portfolio" onclick="switchTab('todd','portfolio',this)">Notable Work</button>
+      </div>
+      <div id="todd-bio" class="modal-panel active" role="tabpanel">
+        <div class="bio-text">
+          <p>Todd Bradford is an Associate in the Corporate &amp; Commercial practice group at Ryan &amp; Lauren LLP, where he advises mid-market and enterprise clients on mergers and acquisitions, corporate restructurings, governance matters, compliance, and international advisory. He works closely with Senior Partner Ryan Brennan on the firm's most complex transactional mandates, and increasingly supports Lauren Gath on cross-border compliance and international matters.</p>
+          <p>Prior to joining the firm, Todd trained at a leading commercial practice where he developed a strong foundation in transactional and regulatory work. His experience spans buy-side and sell-side M&amp;A, management buy-outs, private equity transactions, and multi-jurisdictional compliance programmes. He is known for his careful approach to due diligence and his ability to translate complex legal and regulatory frameworks into clear, practical advice for clients operating across borders.</p>
+          <p>Todd holds an LLB (First Class Honours) from the University of Bristol and completed his LPC with Distinction at the University of Law. He is an active member of the Junior Lawyers Division of the Law Society.</p>
+        </div>
+        <a href="#contact" class="modal-contact-link" onclick="closeModal('todd')">Schedule a Consultation â†’</a>
+      </div>
+      <div id="todd-portfolio" class="modal-panel" role="tabpanel">
+        <div class="portfolio-list">
+          <div class="portfolio-item">
+            <span class="pi-label">M&amp;A Â· 2025</span>
+            <h4>Management Buy-Out â€” Retail Group</h4>
+            <p>Assisted lead counsel on a Â£45M management buy-out of a regional retail group, conducting comprehensive legal due diligence and drafting ancillary transaction documents.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Private Equity Â· 2024</span>
+            <h4>Series B Investment â€” Healthcare Technology</h4>
+            <p>Advised the investor group on a $22M Series B round in a healthcare technology company, including term sheet negotiation, subscription agreement drafting, and investor rights provisions.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Corporate Governance Â· 2024</span>
+            <h4>Subsidiary Restructuring â€” Multinational Group</h4>
+            <p>Supported the restructuring of a multinational group's subsidiary holdings across four jurisdictions, including dissolution of dormant entities and rationalisation of group structure.</p>
+          </div>
+        </div>
+        <a href="#contact" class="modal-contact-link" onclick="closeModal('todd')">Discuss Your Matter â†’</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- â•â•â• ODETTE SAFFRON MODAL â•â•â• -->
+<div class="modal-overlay" id="modal-odette" role="dialog" aria-modal="true" aria-labelledby="mname-odette" onclick="overlayClose(event,'odette')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('odette')" aria-label="Close Odette Saffron profile">âœ•</button>
+    <div class="assoc-modal-header">
+      <div class="assoc-modal-initials" aria-hidden="true">OS</div>
+      <div>
+        <p id="mname-odette" class="modal-name" style="font-size:28px;">Odette Saffron</p>
+        <span class="modal-role-label">Associate Attorney</span>
+        <div class="modal-tags" style="margin-top:12px;">
+          <span class="modal-tag">International Law</span>
+          <span class="modal-tag">Compliance</span>
+          <span class="modal-tag">Trade</span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-tabs" role="tablist">
+        <button class="modal-tab active" role="tab" aria-selected="true" aria-controls="odette-bio" onclick="switchTab('odette','bio',this)">Biography</button>
+        <button class="modal-tab" role="tab" aria-selected="false" aria-controls="odette-portfolio" onclick="switchTab('odette','portfolio',this)">Notable Work</button>
+      </div>
+      <div id="odette-bio" class="modal-panel active" role="tabpanel">
+        <div class="bio-text">
+          <p>Odette Saffron practises in the International &amp; Compliance group at Ryan &amp; Lauren LLP, where she advises clients on cross-border regulatory compliance, international trade law, and the legal complexities of operating across multiple jurisdictions. She supports Senior Partner Lauren Gath on the firm's most internationally complex mandates.</p>
+          <p>Odette's background combines academic excellence with hands-on experience in international regulatory environments. Before joining the firm, she completed a secondment with the compliance function of a global commodities trader â€” an experience that gave her a practical appreciation of the operational challenges clients face when navigating multi-jurisdictional legal obligations.</p>
+          <p>She advises on AML and sanctions compliance, international trade controls, GDPR and cross-border data flows, and the regulatory aspects of market entry into new jurisdictions. Odette is fluent in French and Spanish, enabling her to support clients operating across Francophone Africa and Latin America. She holds an LLB from Sciences Po Paris and an LLM (International Law) from the University of Edinburgh.</p>
+        </div>
+        <a href="#contact" class="modal-contact-link" onclick="closeModal('odette')">Schedule a Consultation â†’</a>
+      </div>
+      <div id="odette-portfolio" class="modal-panel" role="tabpanel">
+        <div class="portfolio-list">
+          <div class="portfolio-item">
+            <span class="pi-label">Sanctions Compliance Â· 2025</span>
+            <h4>Sanctions Screening Programme â€” Regional Bank</h4>
+            <p>Designed and implemented an updated sanctions screening and monitoring framework for a regional bank following changes to OFAC and EU sanctions regimes affecting their client base.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Market Entry Â· 2024</span>
+            <h4>Regulatory Roadmap â€” West African Expansion</h4>
+            <p>Produced a comprehensive multi-jurisdiction regulatory roadmap for a European logistics company entering five West African markets, covering licensing, local content obligations, and employment law.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Data Compliance Â· 2024</span>
+            <h4>Cross-Border Data Transfer Framework</h4>
+            <p>Advised a global SaaS company on establishing a compliant cross-border data transfer architecture, including Standard Contractual Clauses, data processing agreements, and sub-processor management.</p>
+          </div>
+        </div>
+        <a href="#contact" class="modal-contact-link" onclick="closeModal('odette')">Discuss Your Matter â†’</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- â•â•â• MAISIE BLAKE MODAL â•â•â• -->
+<div class="modal-overlay" id="modal-maisie" role="dialog" aria-modal="true" aria-labelledby="mname-maisie" onclick="overlayClose(event,'maisie')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('maisie')" aria-label="Close Maisie Blake profile">âœ•</button>
+    <div class="assoc-modal-header">
+      <div class="assoc-modal-initials" aria-hidden="true">MB</div>
+      <div>
+        <p id="mname-maisie" class="modal-name" style="font-size:28px;">Maisie Blake</p>
+        <span class="modal-role-label">Associate Attorney</span>
+        <div class="modal-tags" style="margin-top:12px;">
+          <span class="modal-tag">Contract Law</span>
+          <span class="modal-tag">Commercial</span>
+          <span class="modal-tag">Dispute Resolution</span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-tabs" role="tablist">
+        <button class="modal-tab active" role="tab" aria-selected="true" aria-controls="maisie-bio" onclick="switchTab('maisie','bio',this)">Biography</button>
+        <button class="modal-tab" role="tab" aria-selected="false" aria-controls="maisie-portfolio" onclick="switchTab('maisie','portfolio',this)">Notable Work</button>
+      </div>
+      <div id="maisie-bio" class="modal-panel active" role="tabpanel">
+        <div class="bio-text">
+          <p>Maisie Blake is an Associate in the Contract &amp; Commercial practice group at Ryan &amp; Lauren LLP, where she advises clients across the full spectrum of commercial contract work â€” from initial drafting and negotiation through to dispute resolution and enforcement. She works closely with both senior partners on high-value commercial mandates requiring careful contract architecture and risk allocation.</p>
+          <p>Maisie has developed particular expertise in technology and services contracts, supply chain agreements, and construction and infrastructure contracts. She is known within the firm for her precise drafting, her commercial awareness, and her ability to manage complex multi-party negotiations with clarity and composure under pressure.</p>
+          <p>Before joining the firm, Maisie trained at a dispute resolution boutique where she gained valuable experience in contract interpretation, breach of contract claims, and alternative dispute resolution. She regularly represents clients in mediation and has experience supporting counsel in arbitral proceedings. Maisie holds an LLB from Durham University and completed her Bar Practice Course at City, University of London.</p>
+        </div>
+        <a href="#contact" class="modal-contact-link" onclick="closeModal('maisie')">Schedule a Consultation â†’</a>
+      </div>
+      <div id="maisie-portfolio" class="modal-panel" role="tabpanel">
+        <div class="portfolio-list">
+          <div class="portfolio-item">
+            <span class="pi-label">Technology Contract Â· 2025</span>
+            <h4>Enterprise SaaS Master Agreement</h4>
+            <p>Negotiated and finalised a multi-year enterprise SaaS agreement covering liability caps, IP ownership, SLA frameworks, and exit provisions for a major financial services client.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Dispute Resolution Â· 2024</span>
+            <h4>Construction Contract Dispute â€” Mediation</h4>
+            <p>Represented a contractor in a Â£3.2M construction contract dispute, drafting the position statement, preparing witness evidence, and achieving a favourable mediated settlement.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Supply Chain Â· 2024</span>
+            <h4>Framework Supply Agreement â€” Manufacturing Group</h4>
+            <p>Drafted a suite of framework supply agreements for a manufacturing group consolidating its supplier base, including tiered pricing schedules, quality assurance obligations, and termination rights.</p>
+          </div>
+        </div>
+        <a href="#contact" class="modal-contact-link" onclick="closeModal('maisie')">Discuss Your Matter â†’</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- â•â•â• SAMMY C. JAKE MODAL â•â•â• -->
+<div class="modal-overlay" id="modal-sammyc" role="dialog" aria-modal="true" aria-labelledby="mname-sammyc" onclick="overlayClose(event,'sammyc')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('sammyc')" aria-label="Close Sammy C. Jake profile">âœ•</button>
+    <div class="assoc-modal-header">
+      <div class="assoc-modal-initials" aria-hidden="true">SCJ</div>
+      <div>
+        <p id="mname-sammyc" class="modal-name" style="font-size:28px;">Sammy C. Jake</p>
+        <span class="modal-role-label">Associate â€” Intellectual Property, Employment Law & Cybersecurity</span>
+        <div class="modal-tags" style="margin-top:12px;">
+          <span class="modal-tag">Intellectual Property</span>
+          <span class="modal-tag">Employment Law</span>
+          <span class="modal-tag">Cybersecurity</span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-tabs" role="tablist">
+        <button class="modal-tab active" role="tab" aria-selected="true" aria-controls="sammyc-bio" onclick="switchTab('sammyc','bio',this)">Biography</button>
+        <button class="modal-tab" role="tab" aria-selected="false" aria-controls="sammyc-portfolio" onclick="switchTab('sammyc','portfolio',this)">Notable Work</button>
+      </div>
+      <div id="sammyc-bio" class="modal-panel active" role="tabpanel">
+        <div class="bio-text">
+          <p>Sammy C. Jake is an Associate specializing at the intersection of Intellectual Property, Employment Law, and Cybersecurity. With a unique background spanning technology law and data protection, Sammy has developed expertise in helping organizations navigate complex legal challenges in the digital age.</p>
+          <p>Prior to joining Ryan & Lauren LLP, Sammy worked as in-house counsel for a Fortune 500 technology company, where they led the response to multiple high-profile IP infringement cases and data breach incidents. This experience gave them firsthand knowledge of the operational challenges faced by large industries when dealing with cybersecurity threats and intellectual property disputes.</p>
+          <p>Sammy has successfully represented clients in numerous IP litigation matters, including patent disputes, trademark infringement cases, and copyright litigation. They are particularly adept at crafting innovative solutions for clients in the tech, healthcare, and financial services sectors who face complex cybersecurity and employment law challenges. Sammy regularly advises clients on developing comprehensive IP protection strategies and implementing robust cybersecurity compliance programs.</p>
+          <p>Sammy holds a Juris Doctor with a concentration in Intellectual Property Law and is certified in Information Privacy Management (CIPM). They are a frequent speaker at conferences on the intersection of technology law and employment practices, and has published articles on data privacy and cybersecurity compliance in leading legal journals.</p>
+        </div>
+        <a href="#contact" class="modal-contact-link" onclick="closeModal('sammyc')">Schedule a Consultation â†’</a>
+      </div>
+      <div id="sammyc-portfolio" class="modal-panel" role="tabpanel">
+        <div class="portfolio-list">
+          <div class="portfolio-item">
+            <span class="pi-label">Cybersecurity Â· 2025</span>
+            <h4>Data Breach Response â€” Financial Institution</h4>
+            <p>Led the legal response to a major data breach affecting over 2 million customers, coordinating with regulatory authorities, managing notification requirements, and developing remediation strategies to prevent future incidents.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Intellectual Property Â· 2024</span>
+            <h4>Patent Infringement Defense â€” Technology Company</h4>
+            <p>Successfully defended a leading AI software company in patent infringement litigation, achieving a favorable settlement that preserved the client's freedom to operate in the competitive AI market.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Employment Law Â· 2024</span>
+            <h4>Remote Work Policy Implementation â€” Global Enterprise</h4>
+            <p>Developed comprehensive remote work policies and employment agreements for a multinational corporation, addressing cross-border compliance issues and data protection requirements across 15 jurisdictions.</p>
+          </div>
+          <div class="portfolio-item">
+            <span class="pi-label">Cybersecurity Â· 2023</span>
+            <h4>Ransomware Attack Response â€” Healthcare Provider</h4>
+            <p>Managed the legal aspects of a ransomware attack investigation for a healthcare network, ensuring HIPAA compliance, coordinating with law enforcement, and implementing enhanced security protocols.</p>
+          </div>
+        </div>
+        <a href="#contact" class="modal-contact-link" onclick="closeModal('sammyc')">Discuss Your Matter â†’</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal-overlay" id="modal-generic-attorney" role="dialog" aria-modal="true" aria-labelledby="generic-modal-name" onclick="overlayClose(event,'generic-attorney')">
+  <div class="modal-box">
+    <button class="modal-close" type="button" onclick="closeModal('generic-attorney')" aria-label="Close attorney profile">✕</button>
+    <div class="assoc-modal-header">
+      <div class="assoc-modal-initials" id="generic-modal-initials" aria-hidden="true"></div>
+      <div>
+        <p id="generic-modal-name" class="modal-name" style="font-size:28px;"></p>
+        <span class="modal-role-label" id="generic-modal-role"></span>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="bio-text">
+        <p id="generic-modal-focus"></p>
+      </div>
+      <a href="mailto:contact@ryanlauren.com" class="modal-contact-link">Request Consultation →</a>
+    </div>
+  </div>
+</div>
+<script>
+const attorneys = [
+  {id:'sammyc', name:'Sammy C. Jake', role:'Associate — Intellectual Property, Employment Law & Cybersecurity', initials:'SCJ', focus:'IP protection, employment law, and cybersecurity compliance'},
+
+  {id:'alexander', name:'Alexander Hartwell', role:'Partner â€“ Corporate Finance & Transactions', initials:'AH', focus:'Complex financial transactions and corporate advisory'},
+  {id:'bianca', name:'Bianca Moretti', role:'Partner â€“ International Arbitration', initials:'BM', focus:'International commercial arbitration and cross-border dispute resolution'},
+  {id:'caleb', name:'Caleb Nakamura', role:'Associate â€“ Technology & IP', initials:'CN', focus:'Technology contracts, intellectual property, and data privacy'},
+  {id:'delia', name:'Delia Rosenberg', role:'Associate â€“ Real Estate & Corporate', initials:'DR', focus:'Commercial real estate transactions and corporate real estate advisory'},
+  {id:'emil', name:'Emil Bjornstad', role:'Associate â€“ Energy Law', initials:'EB', focus:'Energy regulations and renewable energy projects'},
+  {id:'francesca', name:'Francesca Delacroix', role:'Associate â€“ Cannabis Law', initials:'FD', focus:'Cannabis licensing and regulatory compliance'},
+  {id:'grigori', name:'Grigori Volkov', role:'Partner â€“ International Trade', initials:'GV', focus:'International trade and customs law'},
+  {id:'helena', name:'Helena van der Meer', role:'Associate â€“ Financial Services', initials:'HvD', focus:'Financial regulation and compliance'},
+  {id:'isla', name:'Isla Drummond', role:'Associate â€“ Environmental Law', initials:'ID', focus:'Environmental compliance and sustainability'},
+  {id:'julian', name:'Julian Castellan', role:'Associate â€“ Litigation', initials:'JC', focus:'Commercial litigation and dispute resolution'},
+  {id:'karima', name:'Karima Zerima', role:'Associate â€“ Real Estate', initials:'KZ', focus:'Commercial real estate and development'},
+  {id:'lars', name:'Lars Sundqvist', role:'Associate â€“ Tax', initials:'LS', focus:'Corporate and international tax planning'},
+  {id:'mira', name:'Mira Chowdhury', role:'Associate â€“ Intellectual Property', initials:'MC', focus:'IP protection and technology licensing'},
+  {id:'nicolai', name:'Nicolai Petrescu', role:'Associate â€“ Labor & Employment', initials:'NP', focus:'Employment law and workplace compliance'},
+  {id:'oriana', name:'Oriana Salazar', role:'Associate â€“ Immigration', initials:'OS', focus:'Business immigration and visa services'},
+  {id:'preston', name:'Preston Hale', role:'Associate â€“ Startups & Venture Capital', initials:'PH', focus:'Startup formation and venture financing'},
+  {id:'quiana', name:'Quiana Mensah', role:'Associate â€“ Nonprofit', initials:'QM', focus:'Nonprofit formation and regulatory compliance'},
+  {id:'rafael', name:'Rafael Santos', role:'Associate â€“ Bankruptcy', initials:'RS', focus:'Bankruptcy and restructuring matters'},
+  {id:'svetlana', name:'Svetlana Ivanova', role:'Associate â€“ Compliance', initials:'SI', focus:'Regulatory compliance and risk management'},
+  {id:'tariq', name:'Tariq Hassan', role:'Associate â€“ Insurance', initials:'TH', focus:'Insurance coverage and claims recovery'},
+  {id:'uma', name:'Uma Srinivasan', role:'Associate â€“ Privacy', initials:'US', focus:'Data privacy and cybersecurity law'},
+  {id:'viktor', name:'Viktor Lazar', role:'Associate â€“ Gaming', initials:'VL', focus:'Gaming law and lottery regulations'},
+  {id:'willow', name:'Willow Thorne', role:'Associate â€“ Trusts', initials:'WT', focus:'Estate planning and trust administration'},
+  {id:'ximena', name:'Ximena Cruz', role:'Associate â€“ Tax', initials:'XC', focus:'Tax planning and controversy'},
+  {id:'yuki', name:'Yuki Tanaka', role:'Associate â€“ Corporate', initials:'YT', focus:'Corporate governance and compliance'},
+  {id:'zane', name:'Zane Barakat', role:'Associate â€“ Litigation', initials:'ZB', focus:'Commercial litigation and arbitration'},
+  {id:'adriana', name:'Adriana KovaÄ', role:'Associate â€“ International', initials:'AK', focus:'International law and cross-border disputes'},
+  {id:'bennett', name:'Bennett Osei', role:'Associate â€“ Employment', initials:'BO', focus:'Employment law and labor relations'},
+  {id:'catarina', name:'Catarina Lobo', role:'Associate â€“ Contract', initials:'CL', focus:'Commercial contracts and negotiations'},
+  {id:'dimitri', name:'Dimitri Papadakis', role:'Associate â€“ M&A', initials:'DP', focus:'Merger & acquisition transactions'},
+  {id:'elena', name:'Elena Vasquez', role:'Associate â€“ Healthcare', initials:'EV', focus:'Healthcare law and regulatory affairs'},
+  {id:'farid', name:'Farid Al-Masri', role:'Associate â€“ Corporate', initials:'FA', focus:'Corporate finance and securities law'},
+  {id:'greta', name:'Greta Stein', role:'Associate â€“ Compliance', initials:'GS', focus:'Regulatory compliance and investigations'},
+  {id:'hiroshi', name:'Hiroshi Yamamoto', role:'Associate â€“ IP', initials:'HY', focus:'Intellectual property and patents'},
+  {id:'ines', name:'Ines Bouchard', role:'Associate â€“ Privacy', initials:'IB', focus:'Information privacy and data protection'},
+  {id:'jaewon', name:'Jae-won Park', role:'Associate â€“ Technology', initials:'JP', focus:'Technology law and software licensing'},
+  {id:'katarzyna', name:'Katarzyna Wisniewski', role:'Associate â€“ Corporate', initials:'KW', focus:'Corporate governance and shareholder rights'},
+  {id:'leila', name:'Leila Haddad', role:'Associate â€“ Immigration', initials:'LH', focus:'Business immigration and work visas'},
+  {id:'mateo', name:'Mateo Rivera', role:'Associate â€“ Real Estate', initials:'MR', focus:'Real estate transactions and disputes'},
+  {id:'nadia', name:'Nadia El-Hourani', role:'Associate â€“ International', initials:'NE', focus:'International trade and compliance'},
+  {id:'oskar', name:'Oskar Lund', role:'Associate â€“ Energy', initials:'OL', focus:'Energy law and environmental compliance'},
+  {id:'petra', name:'Petra NovÃ¡k', role:'Associate â€“ Tax', initials:'PN', focus:'International tax and transfer pricing'},
+  {id:'quentin', name:'Quentin Rhodes', role:'Associate â€“ Nonprofit', initials:'QR', focus:'Nonprofit law and charitable organizations'},
+  {id:'rosalind', name:'Rosalind Yeung', role:'Associate â€“ Employment', initials:'RY', focus:'Employment law and workplace issues'},
+  {id:'stefan', name:'Stefan Ciobanu', role:'Associate â€“ Litigation', initials:'SC', focus:'Commercial litigation and arbitration'},
+  {id:'tatiana', name:'Tatiana Morozova', role:'Associate â€“ Estate', initials:'TM', focus:'Estate planning and probate'},
+  {id:'usman', name:'Usman Khokhar', role:'Associate â€“ Corporate', initials:'UK', focus:'Corporate law and business transactions'},
+  {id:'valentina', name:'Valentina Esposito', role:'Associate â€“ Contract', initials:'VE', focus:'Contract law and commercial disputes'},
+  {id:'wen', name:'Wen Li', role:'Associate â€“ International', initials:'WL', focus:'International business law'},
+  {id:'xiomara', name:'Xiomara Reyes', role:'Associate â€“ Compliance', initials:'XR', focus:'Regulatory compliance and investigations'},
+  {id:'youssef', name:'Youssef Benali', role:'Associate â€“ Tax', initials:'YB', focus:'International tax planning and controversy'},
+  {id:'zofia', name:'Zofia Kowalski', role:'Associate â€“ Labor & Employment', initials:'ZK', focus:'Employment law and workplace discrimination'},
+  {id:'ananya', name:'Ananya Deshpande', role:'Associate â€“ Technology & IP', initials:'AD', focus:'Technology licensing and intellectual property protection'}
+];
+
+function populateAssociates(){
+  const grid=document.getElementById('associates-grid');
+  if(!grid)return;
+  attorneys.filter(a=>!['alexander','bianca','caleb','delia','todd','odette','maisie'].includes(a.id)).forEach(a=>{
+    const el=document.createElement('div');
+    el.className='assoc-card-wrap';
+    el.innerHTML=`<button class="associate-card" type="button" onclick="openModal('${a.id}')" aria-haspopup="dialog" aria-label="View ${a.name}'s profile">
+      <div class="assoc-initials" aria-hidden="true">${a.initials}</div>
+      <h4>${a.name}</h4>
+      <span class="assoc-role">${a.role}</span>
+      <p>${a.focus}</p>
+      <span class="assoc-view" aria-hidden="true">View profile â†’</span>
+    </button>`;
+    grid.appendChild(el);
+  });
+}
+
+function toggleMarquee(){
+  const m=document.getElementById('clientMarquee'),btn=document.getElementById('marqueeToggle');
+  const p=m.classList.toggle('paused');
+  btn.textContent=p?'â–¶ Play':'â¸ Pause';
+  btn.setAttribute('aria-label',p?'Play scrolling client names':'Pause scrolling client names');
+}
+function toggleMenu(btn){
+  const nav=document.getElementById('main-nav');
+  const open=nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded',open);btn.textContent=open?'âœ•':'â˜°';
+}
+let prevFocus=null;
+function populateGenericModal(id){
+  const a=attorneys.find(x=>x.id===id);
+  const o=document.getElementById('modal-generic-attorney');
+  if(!a||!o)return null;
+  document.getElementById('generic-modal-initials').textContent=a.initials;
+  document.getElementById('generic-modal-name').textContent=a.name;
+  document.getElementById('generic-modal-role').textContent=a.role;
+  document.getElementById('generic-modal-focus').textContent=a.focus;
+  o.setAttribute('aria-label',a.name+' profile');
+  return o;
+}
+function openModal(id){
+  prevFocus=document.activeElement;
+  const o=document.getElementById('modal-'+id)||populateGenericModal(id);
+  if(!o)return;
+  o.classList.add('open');
+  document.body.style.overflow='hidden';
+  const cb=o.querySelector('.modal-close');
+  if(cb)setTimeout(()=>cb.focus(),60);
+  document.addEventListener('keydown',trapKey);
+}
+function closeModal(id){
+  const o=document.getElementById('modal-'+id)||document.getElementById('modal-generic-attorney');
+  if(o)o.classList.remove('open');
+  document.body.style.overflow='';
+  document.removeEventListener('keydown',trapKey);
+  if(prevFocus)prevFocus.focus();
+}
+function overlayClose(e,id){if(e.target===e.currentTarget)closeModal(id);}
+function trapKey(e){
+  if(e.key==='Escape'){const o=document.querySelector('.modal-overlay.open');if(o)closeModal(o.id.replace('modal-',''));return;}
+  if(e.key==='Tab'){
+    const o=document.querySelector('.modal-overlay.open');if(!o)return;
+    const els=[...o.querySelectorAll('button,a,[tabindex]:not([tabindex="-1"])')];
+    if(!els.length)return;
+    if(e.shiftKey){if(document.activeElement===els[0]){e.preventDefault();els[els.length-1].focus();}}
+    else{if(document.activeElement===els[els.length-1]){e.preventDefault();els[0].focus();}}
+  }
+}
+function switchTab(person,panel,btn){
+  const box=document.getElementById('modal-'+person);
+  if(!box)return;
+  box.querySelectorAll('.modal-tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false');});
+  box.querySelectorAll('.modal-panel').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');btn.setAttribute('aria-selected','true');
+  const t=document.getElementById(person+'-'+panel);if(t)t.classList.add('active');
+}
+function checkRate(k){const n=Date.now();let d=JSON.parse(sessionStorage.getItem(k)||'{"c":0,"r":0}');if(n>d.r){d.c=0;d.r=n+600000;}d.c++;sessionStorage.setItem(k,JSON.stringify(d));return d.c<=3;}
+function san(s){return String(s).replace(/[<>"'`;&]/g,'').trim().slice(0,500);}
+function validEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e);}
+function submitContact(){
+  const name=san(document.getElementById('c-name').value);
+  const email=san(document.getElementById('c-email').value);
+  const subject=san(document.getElementById('c-subject').value);
+  const message=san(document.getElementById('c-message').value);
+  const honey=document.querySelector('#contactForm [name="_honey"]').value;
+  if(honey)return;
+  if(!name||!email||!subject||!message)return showMsg('contact-msg','Please complete all required fields.','error');
+  if(!validEmail(email))return showMsg('contact-msg','Please enter a valid email address.','error');
+  if(!checkRate('conR'))return showMsg('contact-msg','Too many submissions. Please wait 10 minutes.','error');
+  document.getElementById('contactForm').submit();
+}
+function showMsg(id,msg,type){const el=document.getElementById(id);if(!el)return;el.textContent=msg;el.className='form-msg '+type;el.style.display='block';setTimeout(()=>{el.style.display='none';},6000);}
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('main-nav').classList.remove('open');const t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.textContent='â˜°';}}));
+document.querySelectorAll('input,textarea').forEach(el=>el.addEventListener('contextmenu',e=>e.preventDefault()));
+populateAssociates();
+</script>
+</body>
+</html>
+
