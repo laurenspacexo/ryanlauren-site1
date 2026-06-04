@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>Contact - Ryan &amp; Lauren LLP</title>
 <meta name="description" content="Contact Ryan & Lauren LLP.">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -56,7 +57,7 @@ nav a:hover,nav a:focus-visible{color:var(--gold);}
 .btn-primary:hover,.btn-primary:focus-visible{background:transparent;color:var(--gold);}
 .trust-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:22px 60px;display:flex;justify-content:center;align-items:center;gap:44px;flex-wrap:wrap;background:var(--dark2);}
 .trust-strip span{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);}
-.trust-strip span::before{content:"â€”  ";color:var(--gold);}
+.trust-strip span::before{content:"-  ";color:var(--gold);}
 section{padding:100px 60px;max-width:1200px;margin:auto;}
 .section-label{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block;}
 h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,44px);font-weight:600;margin-bottom:24px;line-height:1.2;color:var(--text);}
@@ -150,11 +151,11 @@ footer nav a{font-size:11px;}
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <header role="banner">
-  <a href="index.html" class="logo" aria-label="Ryan and Lauren LLP â€” Home">Ryan <span>&amp;</span> Lauren <span style="font-size:13px;letter-spacing:3px;">LLP</span></a>
-  <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav" onclick="toggleMenu(this)">â˜°</button>
+  <a href="index.html" class="logo" aria-label="Ryan and Lauren LLP - Home">Ryan <span>&amp;</span> Lauren <span style="font-size:13px;letter-spacing:3px;">LLP</span></a>
+  <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav" onclick="toggleMenu(this)">Menu</button>
   <nav id="main-nav" role="navigation" aria-label="Main navigation">
     <div class="dropdown">
-      <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">About <span class="arrow">â–¾</span></button>
+      <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">About <span class="arrow">v</span></button>
       <div class="dropdown-content" role="menu">
         <a href="about.html" target="_blank" rel="noopener">About Us</a>
         <a href="community.html" target="_blank" rel="noopener">Community</a>
@@ -166,7 +167,7 @@ footer nav a{font-size:11px;}
       </div>
     </div>
     <div class="dropdown">
-      <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">Services <span class="arrow">â–¾</span></button>
+      <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">Services <span class="arrow">v</span></button>
       <div class="dropdown-content" role="menu">
         <a href="index.html#svc-accountant">Accountant & Professional Liability</a>
         <a href="index.html#svc-admin">Administrative & Regulatory Law</a>
@@ -210,7 +211,7 @@ footer nav a{font-size:11px;}
     </div>
     <a href="team.html">Team</a>
     <div class="dropdown">
-      <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">Insights <span class="arrow">â–¾</span></button>
+      <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">Insights <span class="arrow">v</span></button>
       <div class="dropdown-content" role="menu">
         <a href="news.html" target="_blank" rel="noopener">News</a>
         <a href="blog.html" target="_blank" rel="noopener">Blog</a>
@@ -235,18 +236,21 @@ footer nav a{font-size:11px;}
 </main>
 <footer role="contentinfo">
   <div class="footer-logo">Ryan & Lauren LLP</div>
-  <p>Â© 2026 Ryan & Lauren LLP. All rights reserved.</p>
+  <p>Copyright 2026 Ryan & Lauren LLP. All rights reserved.</p>
   <nav aria-label="Footer navigation">
     <a href="about.html">About</a>
     <a href="index.html#services">Services</a>
     <a href="contact.html">Contact</a>
     <a href="accessibility.html">Accessibility</a>
   </nav>
-  <p style="font-size:11px;">Confidential Â· Strategic Â· Results-Driven</p>
+  <p style="font-size:11px;">Confidential - Strategic - Results-Driven</p>
 </footer>
 <script>
-function toggleMenu(btn){const nav=document.getElementById('main-nav');const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);btn.textContent=open?'✕':'☰';}
-document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('main-nav').classList.remove('open');const t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.textContent='☰';}}));
+function toggleMenu(btn){const nav=document.getElementById('main-nav');const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',open);btn.textContent=open?'X':'Menu';}
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('main-nav').classList.remove('open');const t=document.querySelector('.menu-toggle');if(t){t.setAttribute('aria-expanded','false');t.textContent='Menu';}}));
 </script>
 </body>
 </html>
+
+
+
