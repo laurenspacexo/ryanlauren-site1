@@ -934,6 +934,75 @@ const attorneys = [
   {id:'ananya', name:'Ananya Deshpande', role:'Associate - Technology & IP', initials:'AD', focus:'Technology licensing and intellectual property protection'}
 ];
 
+function composeAttorneyBio(a){
+  const customBios={
+    viktor:`Viktor Lazar is a dedicated civil rights and disability attorney whose work is shaped by a deep commitment to dignity, fairness, and equal access under the law. Born in Romania, Viktor brings a broad perspective to his legal practice, informed by an appreciation for the rights and freedoms that protect individuals from discrimination, exclusion, and unequal treatment.
+
+In his practice, Viktor focuses on representing individuals whose civil rights have been violated, with particular attention to matters involving disability rights, accessibility, discrimination, and the enforcement of legal protections for people with disabilities. He is committed to helping clients navigate complex legal systems with clarity, compassion, and determination.
+
+Viktor's approach combines careful legal analysis with a strong sense of advocacy. He understands that civil rights and disability cases often involve more than legal claims; they affect a person's independence, livelihood, education, housing, healthcare, and ability to participate fully in public life. For that reason, he works closely with clients to understand their experiences, identify practical solutions, and pursue meaningful outcomes.
+
+As an attorney, Viktor Lazar is guided by the belief that equal rights must be more than words on paper. Through his work, he seeks to hold institutions, employers, public entities, and private organizations accountable when they fail to meet their legal obligations. His advocacy reflects both professionalism and purpose: protecting vulnerable individuals, challenging discriminatory practices, and advancing a more inclusive society.
+
+Known for his thoughtful counsel and steady commitment to justice, Viktor serves clients with respect, patience, and resolve. Whether addressing accessibility barriers, disability discrimination, denial of reasonable accommodations, or broader civil rights violations, he brings a client-centered perspective to every matter.
+
+Viktor Lazar's legal career reflects a clear mission: to defend the rights of individuals who have been marginalized, overlooked, or denied equal treatment, and to help ensure that the protections promised by law are honored in everyday life.`
+  };
+  if(customBios[a.id])return customBios[a.id];
+  const firstName=a.name.split(' ')[0];
+  const focus=a.focus;
+  const practice=(a.role+' '+a.focus).toLowerCase();
+  let detail='They approach each matter with careful analysis, clear communication, and attention to the practical details that shape a strong legal strategy.';
+
+  if(practice.includes('technology')||practice.includes('software')||practice.includes('data privacy')||practice.includes('cybersecurity')){
+    detail=`${firstName} advises on legal issues connected to technology, digital operations, privacy obligations, and the contracts that support modern business systems.`;
+  }else if(practice.includes('intellectual property')||practice.includes(' ip')||practice.includes('patent')||practice.includes('licensing')){
+    detail=`${firstName} helps clients protect, manage, and use intellectual property in ways that support innovation, brand value, and long-term commercial goals.`;
+  }else if(practice.includes('real estate')){
+    detail=`${firstName} works on real estate matters that call for close review of transaction terms, development concerns, ownership issues, and practical business risk.`;
+  }else if(practice.includes('energy')||practice.includes('environmental')||practice.includes('sustainability')){
+    detail=`${firstName} assists with matters involving regulatory obligations, project planning, and environmental or energy-related decisions that require careful legal guidance.`;
+  }else if(practice.includes('cannabis')){
+    detail=`${firstName} supports clients navigating licensing, regulatory duties, and compliance expectations in the highly detailed cannabis legal environment.`;
+  }else if(practice.includes('international')||practice.includes('trade')||practice.includes('cross-border')){
+    detail=`${firstName} focuses on cross-border legal questions, helping clients manage jurisdictional issues, international obligations, and the risks that arise in global matters.`;
+  }else if(practice.includes('financial')||practice.includes('securities')||practice.includes('finance')){
+    detail=`${firstName} advises on financial and regulatory matters where precision, documentation, and a clear understanding of business objectives are essential.`;
+  }else if(practice.includes('litigation')||practice.includes('arbitration')||practice.includes('dispute')){
+    detail=`${firstName} works on disputes with a focus on preparation, evidence, negotiation posture, and practical resolution strategies.`;
+  }else if(practice.includes('tax')){
+    detail=`${firstName} helps clients address tax planning, reporting, and controversy issues with attention to both technical requirements and real-world consequences.`;
+  }else if(practice.includes('employment')||practice.includes('labor')||practice.includes('workplace')){
+    detail=`${firstName} advises on workplace matters, helping clients understand employment obligations, resolve sensitive issues, and maintain compliant practices.`;
+  }else if(practice.includes('immigration')||practice.includes('visa')){
+    detail=`${firstName} assists with business immigration and visa matters, guiding clients through procedural requirements and documentation-heavy processes.`;
+  }else if(practice.includes('startup')||practice.includes('venture')){
+    detail=`${firstName} works with emerging companies and investors on formation, financing, and growth-stage legal questions that require practical commercial judgment.`;
+  }else if(practice.includes('nonprofit')||practice.includes('charitable')){
+    detail=`${firstName} helps nonprofit and charitable organizations address formation, governance, regulatory, and compliance issues tied to mission-driven work.`;
+  }else if(practice.includes('bankruptcy')||practice.includes('restructuring')){
+    detail=`${firstName} assists with financial distress and restructuring matters, focusing on options, obligations, and practical paths toward resolution.`;
+  }else if(practice.includes('compliance')||practice.includes('investigation')){
+    detail=`${firstName} works on compliance and investigation matters where clear policies, accurate records, and disciplined risk management are central.`;
+  }else if(practice.includes('insurance')){
+    detail=`${firstName} advises on insurance coverage and claims issues, helping clients assess policy language, recovery options, and dispute strategy.`;
+  }else if(practice.includes('civil rights')||practice.includes('disability access')){
+    detail=`${firstName} focuses on civil rights and disability access matters, helping clients understand accessibility obligations, compliance needs, and rights-based legal protections.`;
+  }else if(practice.includes('trust')||practice.includes('estate')||practice.includes('probate')){
+    detail=`${firstName} assists with estate, trust, and probate matters that require careful planning, sensitive communication, and close attention to family and fiduciary responsibilities.`;
+  }else if(practice.includes('corporate')||practice.includes('governance')||practice.includes('shareholder')){
+    detail=`${firstName} advises on corporate matters involving governance, transactions, business operations, and the documents that define legal relationships.`;
+  }else if(practice.includes('contract')){
+    detail=`${firstName} works on contract matters by helping clients review obligations, negotiate terms, and reduce uncertainty before disputes arise.`;
+  }else if(practice.includes('m&a')||practice.includes('merger')||practice.includes('acquisition')){
+    detail=`${firstName} supports transaction work involving diligence, negotiation, documentation, and the legal details that affect closing and integration.`;
+  }else if(practice.includes('healthcare')){
+    detail=`${firstName} advises on healthcare legal and regulatory matters where compliance, operational realities, and careful documentation all matter.`;
+  }
+
+  return `${a.name} serves as ${a.role} at Ryan & Lauren LLP. ${firstName}'s practice focuses on ${focus}. ${detail} ${firstName} works to make complex legal questions easier to understand, giving clients practical guidance, organized next steps, and steady communication throughout the matter.`;
+}
+
 function populateAssociates(){
   const grid=document.getElementById('associates-grid');
   if(!grid)return;
@@ -970,7 +1039,7 @@ function populateGenericModal(id){
   document.getElementById('generic-modal-initials').textContent=a.initials;
   document.getElementById('generic-modal-name').textContent=a.name;
   document.getElementById('generic-modal-role').textContent=a.role;
-  document.getElementById('generic-modal-focus').textContent=a.focus;
+  document.getElementById('generic-modal-focus').textContent=composeAttorneyBio(a);
   o.setAttribute('aria-label',a.name+' profile');
   return o;
 }
@@ -1032,7 +1101,6 @@ populateAssociates();
 </script>
 </body>
 </html>
-
 
 
 
