@@ -329,6 +329,16 @@ footer nav a{font-size:11px;}
         </div>
       </button>
     </div>
+    <div class="partner-card-wrap">
+      <button class="partner-card" onclick="openModal('michaelfahey')" aria-label="View Michael C. Fahey's profile">
+        <div class="partner-info" style="padding:24px 28px;">
+          <h3>Michael C. Fahey</h3>
+          <span class="role">Senior Advisor &amp; Of Counsel</span>
+          <p>Distinguished legal veteran advising on civil litigation, civil rights, and complex corporate matters.</p>
+          <span class="view-profile-btn" aria-hidden="true">View Full Profile <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </button>
+    </div>
   </div>
 
   <!-- SENIOR ASSOCIATES -->
@@ -636,6 +646,31 @@ footer nav a{font-size:11px;}
     </div>
   </div>
 </div>
+<!--  MICHAEL C. FAHEY MODAL  -->
+<div class="modal-overlay" id="modal-michaelfahey" role="dialog" aria-modal="true" aria-labelledby="mname-michaelfahey" onclick="overlayClose(event,'michaelfahey')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('michaelfahey')" aria-label="Close Michael C. Fahey profile">X</button>
+    <div class="assoc-modal-header">
+      <div class="assoc-modal-initials" aria-hidden="true">MF</div>
+      <div>
+        <p id="mname-michaelfahey" class="modal-name" style="font-size:28px;">Michael C. Fahey</p>
+        <span class="modal-role-label">Senior Advisor &amp; Of Counsel</span>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="bio-text">
+        <p>Michael C. Fahey is a distinguished legal veteran whose five-decade career stands as a testament to the highest traditions of the American legal profession. Recognized by peers and clients alike as a formidable force in the courtroom and a trusted architect of complex transactions, Mr. Fahey brings to Ryan &amp; Lauren LLP a depth of experience that few attorneys in practice today can rival.</p>
+        <p>Over the course of his storied career, Mr. Fahey has built an exceptional reputation across three pillars of legal practice - civil litigation and trial advocacy, civil rights law, and corporate transactional work. This rare breadth of mastery has allowed him to serve clients not only as a skilled advocate, but as a sophisticated counselor capable of seeing every dimension of a legal challenge, anticipating risk, and engineering outcomes that protect what matters most. Whether commanding a courtroom, negotiating a high-stakes transaction, or advancing the rights of those who have been wronged, Mr. Fahey has consistently demonstrated the kind of judgment that only comes from decades at the forefront of the law.</p>
+        <p>Mr. Fahey's litigation practice has been defined by a commanding courtroom presence and an unwavering commitment to his clients' interests. Throughout his career, he has tried complex matters across a broad spectrum of disputes, earning a reputation as a tenacious yet measured advocate who prepares meticulously and performs brilliantly under pressure. His civil rights work reflects a deeply held conviction that the law must serve as a shield for the vulnerable, and his record in this arena reflects decades of principled, impactful advocacy on behalf of individuals whose rights and dignity demanded protection.</p>
+        <p>On the transactional side, Mr. Fahey has guided businesses, entrepreneurs, and institutional clients through the full spectrum of corporate matters, from structuring deals and negotiating agreements to navigating regulatory landscapes and managing the legal complexities that accompany growth and change. His counsel has helped clients make critical decisions with confidence, knowing that one of the profession's most experienced minds stands firmly in their corner.</p>
+        <p>Mr. Fahey's excellence has been recognized at the highest levels of the legal community. Beyond his individual accolades, Mr. Fahey has demonstrated a sustained commitment to the legal profession itself through active leadership within bar associations, contributing his experience and voice to shaping the standards and direction of the profession he has served so faithfully for so long.</p>
+        <p>Now serving as Senior Advisor &amp; Of Counsel at Ryan &amp; Lauren LLP, Mr. Fahey brings the full weight of his legendary career to bear on behalf of the firm and its clients. In this role, he serves as a strategic resource of the highest order, a seasoned counselor whose instincts are sharpened by decades of real-world experience, and whose perspective elevates the quality of the firm's work across every matter he touches. His presence at Ryan &amp; Lauren LLP reflects the firm's commitment to offering clients not just legal representation, but the very best legal minds available.</p>
+        <p>Clients who work with Mr. Fahey benefit from something that cannot be taught in any classroom or replicated by any amount of study alone, the wisdom, composure, and foresight that only a lifetime of devoted legal practice can produce.</p>
+      </div>
+      <a href="index.html#contact" class="modal-contact-link" onclick="closeModal('michaelfahey')">Schedule a Consultation -></a>
+    </div>
+  </div>
+</div>
 <!--  TODD BRADFORD MODAL  -->
 <div class="modal-overlay" id="modal-todd" role="dialog" aria-modal="true" aria-labelledby="mname-todd" onclick="overlayClose(event,'todd')">
   <div class="modal-box">
@@ -881,6 +916,7 @@ const attorneys = [
 
   {id:'alexander', name:'Alexander Hartwell', role:'Partner - Corporate Finance & Transactions', initials:'AH', focus:'Complex financial transactions and corporate advisory'},
   {id:'bianca', name:'Bianca Moretti', role:'Partner - International Arbitration', initials:'BM', focus:'International commercial arbitration and cross-border dispute resolution'},
+  {id:'michaelfahey', name:'Michael C. Fahey', role:'Senior Advisor & Of Counsel', initials:'MF', focus:'Civil litigation, civil rights, and corporate transactional work'},
   {id:'caleb', name:'Caleb Nakamura', role:'Associate - Technology & IP', initials:'CN', focus:'Technology contracts, intellectual property, and data privacy'},
   {id:'delia', name:'Delia Rosenberg', role:'Associate - Real Estate & Corporate', initials:'DR', focus:'Commercial real estate transactions and corporate real estate advisory'},
   {id:'emil', name:'Emil Bjornstad', role:'Associate - Energy Law', initials:'EB', focus:'Energy regulations and renewable energy projects'},
@@ -1006,7 +1042,7 @@ Viktor Lazar's legal career reflects a clear mission: to defend the rights of in
 function populateAssociates(){
   const grid=document.getElementById('associates-grid');
   if(!grid)return;
-  attorneys.filter(a=>!['alexander','bianca','caleb','delia','todd','odette','maisie'].includes(a.id)).forEach(a=>{
+  attorneys.filter(a=>!['alexander','bianca','michaelfahey','caleb','delia','todd','odette','maisie'].includes(a.id)).forEach(a=>{
     const el=document.createElement('div');
     el.className='assoc-card-wrap';
     el.innerHTML=`<button class="associate-card" type="button" onclick="openModal('${a.id}')" aria-haspopup="dialog" aria-label="View ${a.name}'s profile">
